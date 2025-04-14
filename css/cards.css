@@ -1,0 +1,321 @@
+/* cards.css - Styles specifically for card components */
+
+/* Define notification colors (can be here or in main.css :root) */
+:root {
+    --success-color: #28a745; --success-bg: rgba(40, 167, 69, 0.1);
+    --error-color: #dc3545;   --error-bg: rgba(220, 53, 69, 0.1);
+    --warning-color: #ffc107; --warning-bg: rgba(255, 193, 7, 0.1);
+    --info-color: #17a2b8;    --info-bg: rgba(23, 162, 184, 0.1);
+  }
+  
+  /* --- Base Card Styles --- */
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure card takes full width of grid cell */
+    max-width: 350px; /* Optional: max width for cards */
+    margin: 0 auto; /* Center card if grid cell is wider */
+  }
+  
+  .card-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .card-body {
+    padding: 20px;
+    flex-grow: 1; /* Allows body to fill available space */
+  }
+  .card-body p:last-child { margin-bottom: 0; } /* Remove extra margin */
+  
+  .card-footer {
+    padding: 12px 20px;
+    border-top: 1px solid var(--border-color);
+    background-color: rgba(0,0,0,0.03); /* Subtle bg */
+  }
+  [data-theme="dark"] .card-footer {
+    background-color: rgba(255,255,255,0.05);
+  }
+  
+  .card-title { /* Specific to card titles */
+    margin: 0 0 10px 0; /* Add bottom margin */
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .card-header .card-title { margin-bottom: 0; } /* No margin if in header */
+  
+  .text-center { text-align: center; }
+  .text-secondary { color: var(--text-secondary); font-size: 0.9rem; }
+  
+  /* --- Specific Card Type Styles --- */
+  
+  /* 1. Basic Card */
+  /* .card-basic doesn't need extra CSS if covered by base */
+  
+  /* 2. Image Card (Top) */
+  .card-image-top .card-img-top {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Optional max height */
+    object-fit: cover; /* Cover area nicely */
+    display: block;
+    /* Adjust border radius if card radius is not 0 */
+    /* border-top-left-radius: calc(8px - 1px); */
+    /* border-top-right-radius: calc(8px - 1px); */
+  }
+  
+  /* 3. Profile Card */
+  .card-profile { align-items: center; } /* Center content */
+  .card-profile-header {
+    padding-top: 20px;
+    border-bottom: none; /* Remove header border */
+    background: linear-gradient(135deg, var(--purple-color), var(--purple-dark)); /* Example background */
+    height: 80px; /* Header height */
+    width: 100%;
+  }
+  .card-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--card-bg); /* Use card background color */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    margin-top: -50px; /* Overlap header */
+    position: relative; /* Needed if using z-index */
+    z-index: 1; /* Make sure avatar is above potential background elements */
+    background-color: var(--card-bg); /* Ensure avatar bg matches card */
+  }
+  .card-avatar.small { /* For testimonial */
+    width: 50px; height: 50px;
+    border-width: 2px;
+  }
+  .card-profile .card-body {
+    padding-top: 60px; /* Space for overlapped avatar */
+  }
+  
+  /* 4. Product Card */
+  .card-product .card-img-top { /* Shares style with card-image-top */
+    width: 100%; height: auto; max-height: 250px; object-fit: cover; display: block;
+  }
+  .card-product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--purple-color);
+    margin-bottom: 10px;
+  }
+  .card-product .card-footer {
+    text-align: right; /* Align button right */
+  }
+  .btn-small { /* Utility class also used elsewhere */
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  
+  /* 5. Card with Footer Actions */
+  .card-footer-actions {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    gap: 10px; /* Space between actions */
+  }
+  .card-link {
+    color: var(--purple-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  .card-link:hover {
+    color: var(--purple-dark);
+    text-decoration: underline;
+  }
+  
+  /* 6. Horizontal Card */
+  .card-horizontal {
+    flex-direction: row; /* Override base card direction */
+    align-items: stretch; /* Stretch items vertically */
+    max-width: none; /* Allow horizontal card to be wider */
+  }
+  .card-horizontal .card-img-left {
+    width: 130px; /* Fixed width for image */
+    height: auto;
+    object-fit: cover; /* Cover the area */
+    flex-shrink: 0; /* Prevent image shrinking */
+    border-right: 1px solid var(--border-color);
+    /* border-top-left-radius: calc(8px - 1px); */
+    /* border-bottom-left-radius: calc(8px - 1px); */
+  }
+  .card-horizontal .card-body {
+    /* border-left: 1px solid var(--border-color); Removed, border is on image */
+    padding: 16px; /* Adjust padding */
+  }
+  
+  /* 7. Icon Header Card */
+  .card-header-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between icon and title */
+  }
+  .card-header-icon svg {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    color: var(--purple-color); /* Color the icon */
+    flex-shrink: 0;
+  }
+  .card-header-icon .card-title {
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* 8. Notification Card */
+  .card-notification {
+    border-left-width: 5px; /* Thick left border */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    border-top: none; border-right: none; border-bottom: none; /* Only left border needed */
+  }
+  .card-notification .card-body { padding: 16px 20px; }
+  .card-notification .card-title { margin-bottom: 5px; }
+  
+  .card-success {
+    border-left-color: var(--success-color);
+    background-color: var(--success-bg);
+  }
+  .card-success .card-title { color: var(--success-color); }
+  
+  .card-error {
+    border-left-color: var(--error-color);
+    background-color: var(--error-bg);
+  }
+  .card-error .card-title { color: var(--error-color); }
+  
+  .card-warning {
+    border-left-color: var(--warning-color);
+    background-color: var(--warning-bg);
+  }
+  .card-warning .card-title { color: var(--warning-color); }
+  
+  .card-info {
+    border-left-color: var(--info-color);
+    background-color: var(--info-bg);
+  }
+  .card-info .card-title { color: var(--info-color); }
+  
+  
+  /* 9. Pricing Tier Card */
+  .card-pricing .card-header { border-bottom: none; }
+  .card-pricing .text-center { text-align: center; }
+  .card-price {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+  }
+  .card-price .price-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    display: block; /* Make price take full width */
+    margin-bottom: 5px;
+  }
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0; /* Space around list */
+    text-align: center;
+  }
+  .feature-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 0.95rem;
+  }
+  .feature-list li:first-child { border-top: 1px dashed var(--border-color); }
+  .feature-list li:last-child { border-bottom: none; }
+  .card-pricing .card-footer { border-top: none; padding: 20px; }
+  
+  /* 10. Testimonial Card */
+  .card-testimonial { text-align: center; }
+  .testimonial-quote {
+    font-style: italic;
+    font-size: 1.05rem; /* Slightly smaller */
+    line-height: 1.6;
+    margin-bottom: 20px; /* Space before author */
+    position: relative;
+    padding: 0 10px; /* Padding for quotes */
+  }
+  .testimonial-quote::before {
+    content: '“';
+    font-size: 4rem; /* Larger quote mark */
+    position: absolute;
+    left: -10px; top: -20px; /* Adjust position */
+    color: var(--purple-color);
+    opacity: 0.2;
+    z-index: 0;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center author section */
+    gap: 12px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--border-color);
+    background: none; /* Remove default footer bg */
+  }
+  .author-info { display: flex; flex-direction: column; text-align: left;}
+  .author-name { font-weight: 600; }
+  .author-title { font-size: 0.85rem; color: var(--text-secondary); }
+  
+  
+  /* 11. Stats Card */
+  .card-stats .card-body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+  }
+  .stat-icon svg {
+    width: 36px; height: 36px;
+    color: var(--purple-color);
+    flex-shrink: 0;
+  }
+  .stat-content { flex-grow: 1; text-align: right; } /* Align text right */
+  .stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+    color: var(--text-color);
+  }
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  
+  /* 12. Glassmorphism Card */
+  /* Special preview background for demo */
+  .component-card-glass-preview .component-preview {
+   background: url('https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60') center/cover; /* Example gradient */
+   border-radius: 8px; /* Match preview container */
+  }
+  
+  .card-glass {
+    background: rgba(255, 255, 255, 0.15); /* Base transparency */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /* Subtle shadow */
+    color: #ffffff; /* Force light text */
+  }
+  
+  /* Ensure light text in light mode too */
+  [data-theme="light"] .card-glass {
+    background: rgba(255, 255, 255, 0.5); /* Lighter bg in light mode */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: var(--text-color-light); /* Use theme text color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  .card-glass .card-title { color: inherit; } /* Inherit card text color */
+  .card-glass .card-body { padding: 20px; }

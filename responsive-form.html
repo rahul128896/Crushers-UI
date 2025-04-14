@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <title>Responsive Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .social {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .social a {
+      flex: 1;
+      margin: 5px;
+      padding: 10px;
+      background: #f7f7f7;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .extra {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .checkbox {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .checkbox input {
+      margin-right: 10px;
+    }
+    .checkbox label a {
+      color: #667eea;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Full Name" />
+    <input type="email" placeholder="Email" />
+    <input type="password" placeholder="Password" />
+    
+    <div class="checkbox">
+      <input type="checkbox" id="terms" />
+      <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+    </div>
+
+    <div class="social">
+      <a href="#">Google</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+
+    <button>Register</button>
+    <div class="extra">
+      Already have an account? <a href="#">Log in</a>
+    </div>
+  </div>
+</body>
+</html>

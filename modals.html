@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <title>Modal Component Gallery</title>
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle theme">
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+    </button>
+  </div>
+
+  <header class="header">
+    <h1 class="title">Modal Component Gallery</h1>
+    <p class="subtitle">A collection of beautiful, reusable modal components with code examples</p>
+  </header>
+
+  <main class="container">
+    <section class="component-section">
+      <h2 class="section-title">Modals</h2>
+      <div class="component-grid">
+        <!-- Basic Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="basic-modal">Preview Basic Modal</button>
+            <div class="modal modal-basic" id="basic-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Basic Modal</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This is a basic modal dialog. Click outside or the X button to close.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary">Cancel</button>
+                  <button class="btn btn-primary">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Basic Modal</h3>
+            <p class="component-description">Simple modal with header, body and footer</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="basic-modal"&gt;Open Basic Modal&lt;/button&gt;
+
+&lt;div class="modal modal-basic" id="basic-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Basic Modal&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This is a basic modal dialog. Click outside or the X button to close.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-secondary"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-basic {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-basic.modal-open {
+  display: flex;
+}
+
+.modal-basic .modal-content {
+  background: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-basic .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-basic .modal-body {
+  padding: 20px;
+}
+
+.modal-basic .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Centered Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="centered-modal">Preview Centered Modal</button>
+            <div class="modal modal-centered" id="centered-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Centered Modal</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This modal has vertically centered content with a max-width.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary">Cancel</button>
+                  <button class="btn btn-primary">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Centered Modal</h3>
+            <p class="component-description">Vertically centered modal with max-width</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="centered-modal"&gt;Open Centered Modal&lt;/button&gt;
+
+&lt;div class="modal modal-centered" id="centered-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Centered Modal&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This modal has vertically centered content with a max-width.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-secondary"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-centered {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-centered.modal-open {
+  display: flex;
+}
+
+.modal-centered .modal-content {
+  background: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-centered .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-centered .modal-body {
+  padding: 20px;
+}
+
+.modal-centered .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Fullscreen Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="fullscreen-modal">Preview Fullscreen Modal</button>
+            <div class="modal modal-fullscreen" id="fullscreen-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Fullscreen Modal</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This modal takes up the entire viewport.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Fullscreen Modal</h3>
+            <p class="component-description">Modal that covers the entire viewport</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="fullscreen-modal"&gt;Open Fullscreen Modal&lt;/button&gt;
+
+&lt;div class="modal modal-fullscreen" id="fullscreen-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Fullscreen Modal&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This modal takes up the entire viewport.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-fullscreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-fullscreen.modal-open {
+  display: block;
+}
+
+.modal-fullscreen .modal-content {
+  background: var(--card-bg);
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.modal-fullscreen .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-fullscreen .modal-body {
+  padding: 20px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Alert Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="alert-modal">Preview Alert Modal</button>
+            <div class="modal modal-alert" id="alert-modal">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="alert-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                  </div>
+                  <h3>Alert!</h3>
+                  <p>This is an important alert message.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Alert Modal</h3>
+            <p class="component-description">Simple alert dialog with icon</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="alert-modal"&gt;Open Alert Modal&lt;/button&gt;
+
+&lt;div class="modal modal-alert" id="alert-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;div class="alert-icon"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+          &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+          &lt;line x1="12" y1="8" x2="12" y2="12"&gt;&lt;/line&gt;
+          &lt;line x1="12" y1="16" x2="12.01" y2="16"&gt;&lt;/line&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;h3&gt;Alert!&lt;/h3&gt;
+      &lt;p&gt;This is an important alert message.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-primary"&gt;OK&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-alert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-alert.modal-open {
+  display: flex;
+}
+
+.modal-alert .modal-content {
+  background: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.modal-alert .modal-body {
+  padding: 20px;
+}
+
+.modal-alert .alert-icon {
+  margin-bottom: 16px;
+  color: var(--purple-color);
+}
+
+.modal-alert .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Confirmation Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="confirm-modal">Preview Confirmation Modal</button>
+            <div class="modal modal-confirm" id="confirm-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Confirm Action</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to perform this action?</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary">Cancel</button>
+                  <button class="btn btn-danger">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Confirmation Modal</h3>
+            <p class="component-description">Dialog for confirming important actions</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="confirm-modal"&gt;Open Confirmation Modal&lt;/button&gt;
+
+&lt;div class="modal modal-confirm" id="confirm-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Confirm Action&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;Are you sure you want to perform this action?&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-secondary"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-danger"&gt;Delete&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-confirm {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-confirm.modal-open {
+  display: flex;
+}
+
+.modal-confirm .modal-content {
+  background: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-confirm .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-confirm .modal-body {
+  padding: 20px;
+}
+
+.modal-confirm .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Form Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="form-modal">Preview Form Modal</button>
+            <div class="modal modal-form" id="form-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Contact Us</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <form class="modal-form">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" rows="4" placeholder="Your message"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary">Cancel</button>
+                  <button class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Form Modal</h3>
+            <p class="component-description">Modal containing a form with inputs</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="form-modal"&gt;Open Form Modal&lt;/button&gt;
+
+&lt;div class="modal modal-form" id="form-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Contact Us&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;form class="modal-form"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="name"&gt;Name&lt;/label&gt;
+          &lt;input type="text" id="name" placeholder="Your name"&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="email"&gt;Email&lt;/label&gt;
+          &lt;input type="email" id="email" placeholder="Your email"&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="message"&gt;Message&lt;/label&gt;
+          &lt;textarea id="message" rows="4" placeholder="Your message"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-secondary"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-form {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-form.modal-open {
+  display: flex;
+}
+
+.modal-form .modal-content {
+  background: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-form .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-form .modal-body {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+.modal-form .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Side Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="side-modal">Preview Side Modal</button>
+            <div class="modal modal-side" id="side-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Side Panel</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This modal slides in from the side of the screen.</p>
+                  <nav class="side-nav">
+                    <a href="#">Menu Item 1</a>
+                    <a href="#">Menu Item 2</a>
+                    <a href="#">Menu Item 3</a>
+                    <a href="#">Menu Item 4</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Side Modal</h3>
+            <p class="component-description">Modal that slides in from the side</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="side-modal"&gt;Open Side Modal&lt;/button&gt;
+
+&lt;div class="modal modal-side" id="side-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Side Panel&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This modal slides in from the side of the screen.&lt;/p&gt;
+      &lt;nav class="side-nav"&gt;
+        &lt;a href="#"&gt;Menu Item 1&lt;/a&gt;
+        &lt;a href="#"&gt;Menu Item 2&lt;/a&gt;
+        &lt;a href="#"&gt;Menu Item 3&lt;/a&gt;
+        &lt;a href="#"&gt;Menu Item 4&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-side {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: flex-end;
+}
+
+.modal-side.modal-open {
+  display: flex;
+}
+
+.modal-side .modal-content {
+  background: var(--card-bg);
+  height: 100%;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 0;
+  animation: slideInRight 0.3s ease-out;
+  width: 80%;
+}
+
+.modal-side .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-side .modal-body {
+  padding: 20px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.side-nav a {
+  padding: 10px;
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.side-nav a:hover {
+  background: rgba(156, 39, 176, 0.1);
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Bottom Sheet Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="bottom-modal">Preview Bottom Sheet</button>
+            <div class="modal modal-bottom" id="bottom-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Bottom Sheet</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This modal slides up from the bottom of the screen.</p>
+                  <div class="action-list">
+                    <button class="action-item">Action 1</button>
+                    <button class="action-item">Action 2</button>
+                    <button class="action-item">Action 3</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Bottom Sheet</h3>
+            <p class="component-description">Modal that slides up from the bottom</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="bottom-modal"&gt;Open Bottom Sheet&lt;/button&gt;
+
+&lt;div class="modal modal-bottom" id="bottom-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Bottom Sheet&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This modal slides up from the bottom of the screen.&lt;/p&gt;
+      &lt;div class="action-list"&gt;
+        &lt;button class="action-item"&gt;Action 1&lt;/button&gt;
+        &lt;button class="action-item"&gt;Action 2&lt;/button&gt;
+        &lt;button class="action-item"&gt;Action 3&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-bottom {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: flex-end;
+}
+
+.modal-bottom.modal-open {
+  display: flex;
+}
+
+.modal-bottom .modal-content {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: none;
+  border-radius: 12px 12px 0 0;
+  animation: slideInUp 0.3s ease-out;
+}
+
+.modal-bottom .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-bottom .modal-body {
+  padding: 20px;
+}
+
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.action-item {
+  padding: 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--text-color);
+  border-radius: 6px;
+}
+
+.action-item:hover {
+  background: rgba(156, 39, 176, 0.1);
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Animated Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="animated-modal">Preview Animated Modal</button>
+            <div class="modal modal-animated" id="animated-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Animated Modal</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This modal has a nice fade-in animation.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Animated Modal</h3>
+            <p class="component-description">Modal with smooth fade-in animation</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="animated-modal"&gt;Open Animated Modal&lt;/button&gt;
+
+&lt;div class="modal modal-animated" id="animated-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Animated Modal&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This modal has a nice fade-in animation.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-secondary"&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-animated {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-animated.modal-open {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-animated .modal-content {
+  background: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-animated.modal-open .modal-content {
+  transform: translateY(0);
+}
+
+.modal-animated .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-animated .modal-body {
+  padding: 20px;
+}
+
+.modal-animated .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Gradient Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="gradient-modal">Preview Gradient Modal</button>
+            <div class="modal modal-gradient" id="gradient-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Gradient Modal</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This modal has a beautiful gradient background.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-light">Cancel</button>
+                  <button class="btn btn-white">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Gradient Modal</h3>
+            <p class="component-description">Modal with gradient background</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="gradient-modal"&gt;Open Gradient Modal&lt;/button&gt;
+
+&lt;div class="modal modal-gradient" id="gradient-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Gradient Modal&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This modal has a beautiful gradient background.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-light"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-white"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-gradient {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-gradient.modal-open {
+  display: flex;
+}
+
+.modal-gradient .modal-content {
+  background: linear-gradient(135deg, var(--purple-color), #6a11cb);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.modal-gradient .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-gradient .modal-body {
+  padding: 20px;
+}
+
+.modal-gradient .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-light {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-white {
+  background: white;
+  color: var(--purple-color);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Glass Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="glass-modal">Preview Glass Modal</button>
+            <div class="modal modal-glass" id="glass-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Glass Modal</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This modal has a glassmorphism effect with backdrop blur.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-glass">Cancel</button>
+                  <button class="btn btn-glass-primary">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Glass Modal</h3>
+            <p class="component-description">Modal with glassmorphism effect</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="glass-modal"&gt;Open Glass Modal&lt;/button&gt;
+
+&lt;div class="modal modal-glass" id="glass-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Glass Modal&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This modal has a glassmorphism effect with backdrop blur.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-glass"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-glass-primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-glass {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.modal-glass.modal-open {
+  display: flex;
+}
+
+.modal-glass .modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.modal-glass .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-glass .modal-body {
+  padding: 20px;
+}
+
+.modal-glass .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-glass-primary {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Floating Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="floating-modal">Preview Floating Modal</button>
+            <div class="modal modal-floating" id="floating-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Floating Modal</h3>
+                  <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This modal appears to float above the page with a strong shadow.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary">Cancel</button>
+                  <button class="btn btn-primary">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Floating Modal</h3>
+            <p class="component-description">Modal with strong shadow for floating effect</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="floating-modal"&gt;Open Floating Modal&lt;/button&gt;
+
+&lt;div class="modal modal-floating" id="floating-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Floating Modal&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This modal appears to float above the page with a strong shadow.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-secondary"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-floating {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-floating.modal-open {
+  display: flex;
+}
+
+.modal-floating .modal-content {
+  background: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-floating.modal-open .modal-content {
+  transform: translateY(0);
+}
+
+.modal-floating .modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-floating .modal-body {
+  padding: 20px;
+}
+
+.modal-floating .modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Minimal Modal -->
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="modal-trigger" data-modal="minimal-modal">Preview Minimal Modal</button>
+            <div class="modal modal-minimal" id="minimal-modal">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h3>Minimal Modal</h3>
+                  <p>This modal has a clean, minimal design with no borders.</p>
+                  <div class="modal-actions">
+                    <button class="btn btn-text">Cancel</button>
+                    <button class="btn btn-text-primary">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Minimal Modal</h3>
+            <p class="component-description">Clean modal with minimal styling</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="modal-trigger" data-modal="minimal-modal"&gt;Open Minimal Modal&lt;/button&gt;
+
+&lt;div class="modal modal-minimal" id="minimal-modal"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;h3&gt;Minimal Modal&lt;/h3&gt;
+      &lt;p&gt;This modal has a clean, minimal design with no borders.&lt;/p&gt;
+      &lt;div class="modal-actions"&gt;
+        &lt;button class="btn btn-text"&gt;Cancel&lt;/button&gt;
+        &lt;button class="btn btn-text-primary"&gt;OK&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modal-minimal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-minimal.modal-open {
+  display: flex;
+}
+
+.modal-minimal .modal-content {
+  background: var(--card-bg);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.modal-minimal .modal-body {
+  padding: 0;
+}
+
+.modal-minimal .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+}
+
+.btn-text-primary {
+  background: none;
+  border: none;
+  color: var(--purple-color);
+  padding: 8px 16px;
+  font-weight: 500;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script src="js/modals.js"></script>
+</body>
+</html>

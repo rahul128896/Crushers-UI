@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration UI Library</title>
+  <link rel="stylesheet" href="forms.css">
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <style>
+    :root {
+      --bg-light: linear-gradient(135deg, #f8f6ff, #ece6ff); /* Light purple gradient */
+      --bg-dark: #0e0e0e;
+      --text-light: #2e003e; /* Deep purple for text */
+      --text-dark: #ffffff;
+      --card-light: #ffffff;
+      --card-dark: #1a1a1a;
+      --button-bg-light: #6a0dad; /* Classic purple */
+      --button-text-light: #ffffff;
+      --header-light: rgba(255, 255, 255, 0.9);
+      --header-dark: #1a1a1a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: var(--header-light);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background 0.3s ease;
+    }
+
+    body.dark-mode header {
+      background: var(--header-dark);
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    header button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background: var(--button-bg-light);
+      color: var(--button-text-light);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    header button:hover {
+      background: #4b0082; /* Slightly darker purple */
+    }
+
+    main {
+      text-align: center;
+      padding: 2rem 1rem 4rem;
+    }
+
+    main h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 0 2rem;
+    }
+
+    .card {
+      background: var(--card-light);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    body.dark-mode .card {
+      background: var(--card-dark);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card a {
+      text-decoration: none;
+      background: var(--button-bg-light);
+      color: var(--button-text-light);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    /* Removed dark-mode override for buttons so purple remains in all themes */
+    /*
+    body.dark-mode .card a {
+      background: var(--button-bg-dark);
+      color: var(--button-text-dark);
+    }
+    */
+
+    .card a:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      main h1 {
+        font-size: 2rem;
+      }
+
+      header h2 {
+        font-size: 1.2rem;
+      }
+
+      .card {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+    <button id="themeToggle">🌞</button>
+  
+
+  <main>
+    <h1>Registration Forms Designs</h1>
+    <p>Explore 12 different registration forms designs for your application.</p>
+    <div class="grid">
+      <div class="card"><h3>Minimalist</h3><p>Clean, simple design with essential fields</p><a href="minimalist-form.html">View Design</a></div>
+      <div class="card"><h3>Split Layout</h3><p>Two-column design with image sidebar</p><a href="split-layout-form.html">View Design</a></div>
+      <div class="card"><h3>Multi-step</h3><p>Progressive form with multiple steps</p><a href="multi-step-form.html">View Design</a></div>
+      <div class="card"><h3>Social Focus</h3><p>Social media registration with OAuth</p><a href="social-focus-form.html">View Design</a></div>
+      <div class="card"><h3>Floating Labels</h3><p>Modern form with animated floating labels</p><a href="floating-labels-form.html">View Design</a></div>
+      <div class="card"><h3>Dark Theme</h3><p>Sleek dark-themed registration page</p><a href="dark-theme-form.html">View Design</a></div>
+      <div class="card"><h3>Illustrated</h3><p>Visually rich design with illustrations</p><a href="illustrated-form.html">View Design</a></div>
+      <div class="card"><h3>Enterprise</h3><p>Professional design for business users</p><a href="enterprise-form.html">View Design</a></div>
+      <div class="card"><h3>Responsive</h3><p>Fluid design that adapts to all devices seamlessly</p><a href="responsive-form.html">View Design</a></div>
+      <div class="card"><h3>Wizard-style</h3><p>Step-by-step registration with a visual progress bar</p><a href="wizard-style-form.html">View Design</a></div>
+      <div class="card"><h3>Animated</h3><p>Registration with interactive animations and transitions</p><a href="animated-form.html">View Design</a></div>
+      <div class="card"><h3>Customizable</h3><p>Highly customizable form with theme support and form builder</p><a href="customizable-form.html">View Design</a></div>
+    </div>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      toggleBtn.textContent = isDark ? '🌙' : '🌞';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

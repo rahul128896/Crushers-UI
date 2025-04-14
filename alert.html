@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert Component Gallery</title>
+  <link rel="stylesheet" href="alert.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle theme">
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+    </button>
+  </div>
+
+  <header class="header">
+    <h1 class="title">Alert Component Gallery</h1>
+    <p class="subtitle">A collection of beautiful, reusable alert components with code examples</p>
+  </header>
+
+  <main class="container">
+    <section class="component-section">
+      <h2 class="section-title">Alerts</h2>
+      <div class="component-grid">
+        <!-- Basic Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-basic">
+              This is a basic alert message.
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Basic Alert</h3>
+            <p class="component-description">A simple alert with default styling</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-basic"&gt;
+  This is a basic alert message.
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-basic {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 12px 16px;
+  border-radius: 8px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Success Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-success">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              Your action was completed successfully!
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Success Alert</h3>
+            <p class="component-description">A green alert indicating successful operation</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-success"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"&gt;&lt;/path&gt;
+    &lt;polyline points="22 4 12 14.01 9 11.01"&gt;&lt;/polyline&gt;
+  &lt;/svg&gt;
+  Your action was completed successfully!
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-success {
+  background: rgba(40, 167, 69, 0.15);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  color: #28a745;
+  display: flex;
+  align-items: center;
+}
+
+.alert-success .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Error Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-error">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              Error! Something went wrong.
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Error Alert</h3>
+            <p class="component-description">A red alert indicating an error or problem</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-error"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+    &lt;line x1="12" y1="8" x2="12" y2="12"&gt;&lt;/line&gt;
+    &lt;line x1="12" y1="16" x2="12.01" y2="16"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Error! Something went wrong.
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-error {
+  background: rgba(220, 53, 69, 0.15);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+}
+
+.alert-error .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Warning Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-warning">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              Warning: This action cannot be undone.
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Warning Alert</h3>
+            <p class="component-description">A yellow alert indicating caution</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-warning"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"&gt;&lt;/path&gt;
+    &lt;line x1="12" y1="9" x2="12" y2="13"&gt;&lt;/line&gt;
+    &lt;line x1="12" y1="17" x2="12.01" y2="17"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Warning: This action cannot be undone.
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-warning {
+  background: rgba(255, 193, 7, 0.15);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  color: #ffc107;
+  display: flex;
+  align-items: center;
+}
+
+.alert-warning .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Info Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-info">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              Information: Our system will be down for maintenance.
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Info Alert</h3>
+            <p class="component-description">A blue alert providing information</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-info"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+    &lt;line x1="12" y1="16" x2="12" y2="12"&gt;&lt;/line&gt;
+    &lt;line x1="12" y1="8" x2="12.01" y2="8"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Information: Our system will be down for maintenance.
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-info {
+  background: rgba(23, 162, 184, 0.15);
+  border: 1px solid rgba(23, 162, 184, 0.3);
+  color: #17a2b8;
+  display: flex;
+  align-items: center;
+}
+
+.alert-info .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Dismissible Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-dismissible">
+              <span>This alert can be dismissed.</span>
+              <button class="alert-close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Dismissible Alert</h3>
+            <p class="component-description">An alert that can be closed by the user</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-dismissible"&gt;
+  &lt;span&gt;This alert can be dismissed.&lt;/span&gt;
+  &lt;button class="alert-close-btn"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+      &lt;line x1="18" y1="6" x2="6" y2="18"&gt;&lt;/line&gt;
+      &lt;line x1="6" y1="6" x2="18" y2="18"&gt;&lt;/line&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-dismissible {
+  background: rgba(108, 117, 125, 0.15);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.alert-close-btn:hover {
+  color: var(--text-color);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Gradient Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-gradient">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+              Special announcement with gradient background!
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Gradient Alert</h3>
+            <p class="component-description">An alert with vibrant gradient background</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-gradient"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M22 12h-4l-3 9L9 3l-3 9H2"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  Special announcement with gradient background!
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.alert-gradient .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Glass Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-glass">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+              Glassmorphism style alert
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Glass Alert</h3>
+            <p class="component-description">An alert with glassmorphism effect</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-glass"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+    &lt;path d="M8 14s1.5 2 4 2 4-2 4-2"&gt;&lt;/path&gt;
+    &lt;line x1="9" y1="9" x2="9.01" y2="9"&gt;&lt;/line&gt;
+    &lt;line x1="15" y1="9" x2="15.01" y2="9"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Glassmorphism style alert
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Outline Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-outline">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+              Outline style alert message
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Outline Alert</h3>
+            <p class="component-description">An alert with outline-only styling</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-outline"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;polyline points="4 17 10 11 4 5"&gt;&lt;/polyline&gt;
+    &lt;line x1="12" y1="19" x2="20" y2="19"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Outline style alert message
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-outline {
+  background: transparent;
+  border: 2px solid var(--purple-color);
+  color: var(--purple-color);
+  display: flex;
+  align-items: center;
+}
+
+.alert-outline .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Floating Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-floating">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              Floating alert with shadow
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Floating Alert</h3>
+            <p class="component-description">An alert with floating effect and shadow</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-floating"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  Floating alert with shadow
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-floating {
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: none;
+  display: flex;
+  align-items: center;
+  transform: translateY(0);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.alert-floating:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Banner Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-banner">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              Important banner alert across the top
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Banner Alert</h3>
+            <p class="component-description">A full-width banner style alert</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-banner"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"&gt;&lt;/path&gt;
+    &lt;path d="M13.73 21a2 2 0 0 1-3.46 0"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  Important banner alert across the top
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-banner {
+  background: var(--purple-color);
+  color: white;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: none;
+  position: relative;
+  width: 100%;
+}
+
+.alert-banner .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Solid Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-solid">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+              </svg>
+              Solid alert with icon
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Solid Alert</h3>
+            <p class="component-description">A solid colored alert with icon</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-solid"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+  Solid alert with icon
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-solid {
+  background: var(--purple-color);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.alert-solid .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Animated Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-animated">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              Animated alert with pulse effect
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Animated Alert</h3>
+            <p class="component-description">An alert with subtle animation</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-animated"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"&gt;&lt;/polygon&gt;
+  &lt;/svg&gt;
+  Animated alert with pulse effect
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-animated {
+  background: var(--purple-color);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  animation: pulse 2s infinite;
+}
+
+.alert-animated .alert-icon {
+  margin-right: 10px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(156, 39, 176, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(156, 39, 176, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(156, 39, 176, 0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Rounded Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-rounded">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              Fully rounded alert with icon
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Rounded Alert</h3>
+            <p class="component-description">An alert with fully rounded corners</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-rounded"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;
+    &lt;line x1="12" y1="8" x2="12" y2="12"&gt;&lt;/line&gt;
+    &lt;line x1="12" y1="16" x2="12.01" y2="16"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Fully rounded alert with icon
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-rounded {
+  background: var(--purple-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.alert-rounded .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Left Border Alert -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="alert alert-left-border">
+              <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Alert with colored left border
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Left Border Alert</h3>
+            <p class="component-description">An alert with accent left border</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="alert alert-left-border"&gt;
+  &lt;svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"&gt;&lt;/path&gt;
+    &lt;polyline points="14 2 14 8 20 8"&gt;&lt;/polyline&gt;
+    &lt;line x1="16" y1="13" x2="8" y2="13"&gt;&lt;/line&gt;
+    &lt;line x1="16" y1="17" x2="8" y2="17"&gt;&lt;/line&gt;
+    &lt;polyline points="10 9 9 9 8 9"&gt;&lt;/polyline&gt;
+  &lt;/svg&gt;
+  Alert with colored left border
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.alert-left-border {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-left: 4px solid var(--purple-color);
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.alert-left-border .alert-icon {
+  margin-right: 10px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

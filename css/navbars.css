@@ -1,0 +1,635 @@
+/* navbars.css - Styles specifically for navbar components */
+
+/* --- Base Navbar Styles --- */
+
+.navbar {
+  background-color: var(--card-bg);
+  padding: 0; /* Remove padding, handled by container */
+  border-bottom: 1px solid var(--border-color);
+  min-height: 60px; /* Base height */
+  display: flex; /* Use flex for vertical alignment */
+  align-items: stretch; /* Stretch container vertically */
+  width: 100%;
+  box-sizing: border-box;
+  position: relative; /* Context for absolute elements like mobile menu */
+  z-index: 10; /* Ensure navbars are generally above other preview content */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Default: Brand left, Rest right */
+  width: 100%;
+  max-width: 1200px; /* Or your desired max width */
+  margin: 0 auto;
+  padding: 10px 20px; /* Consistent padding */
+  position: relative; /* Context for absolute children like centered brand */
+}
+
+.navbar-brand {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-right: 1rem; /* Space between brand and nav */
+  white-space: nowrap;
+  flex-shrink: 0; /* Prevent brand from shrinking */
+  display: flex; /* Align icon/text if needed */
+  align-items: center;
+}
+.navbar-brand:hover {
+  color: var(--purple-color);
+}
+
+.navbar-toggler {
+  display: none; /* Hidden on desktop */
+  padding: 8px 10px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem; /* Space from other elements */
+}
+
+.toggler-icon {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-color);
+  margin: 4px 0;
+  transition: background-color 0.3s ease;
+}
+.navbar-toggler:hover .toggler-icon {
+  background-color: var(--purple-color);
+}
+
+.navbar-collapse {
+  display: flex; /* Visible on desktop by default */
+  align-items: center;
+  flex-basis: auto; /* Let content dictate size */
+  flex-grow: 1; /* Allow it to take remaining space */
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: auto; /* Push right by default */
+  gap: 5px; /* Spacing between nav items */
+}
+
+.nav-item {
+  /* Container for nav links */
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 8px 12px; /* Adjusted padding */
+  display: block;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--text-color);
+  background-color: var(--code-bg);
+}
+
+.nav-link.active {
+  color: var(--purple-color);
+  font-weight: 600;
+}
+
+/* Utility: Margin Start Auto */
+.ms-auto {
+    margin-left: auto !important;
+}
+
+/* --- Responsive Base Styles (Mobile First approach recommended, but adapting current structure) --- */
+
+@media (max-width: 768px) { /* Breakpoint for mobile view */
+  .navbar-container {
+    /* flex-wrap: wrap; /* Allow items to wrap if needed */
+  }
+
+  .navbar-toggler {
+    display: block; /* Show hamburger */
+    order: 3; /* Place toggler visually last */
+  }
+
+  .navbar-brand {
+      margin-right: auto; /* Push brand left, keep toggler right */
+      order: 1;
+  }
+
+  .navbar-collapse {
+    display: none; /* Hide menu content by default */
+    order: 4; /* Ensure it appears last in source for absolute positioning */
+    flex-basis: 100%; /* Take full width */
+    flex-grow: 0;
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    position: absolute; /* Take out of flow */
+    top: 100%; /* Position below navbar */
+    left: 0;
+    background-color: var(--card-bg); /* Give it a background */
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px 0; /* Padding for items inside */
+    z-index: 999;
+    align-items: stretch; /* Stretch items */
+  }
+
+  .navbar-collapse.active { /* Class added by JS */
+    display: flex; /* Show the menu */
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically */
+    margin-left: 0; /* Reset margin */
+    width: 100%;
+    gap: 0; /* Reset gap */
+  }
+  .nav-link {
+    padding: 12px 20px;
+    text-align: left; /* Align text left on mobile */
+    border-bottom: 1px solid var(--border-color);
+  }
+  .nav-item:last-child .nav-link { border-bottom: none; }
+  .nav-link:hover { background-color: var(--code-bg); }
+
+  /* Ensure elements pushed right on desktop are handled on mobile */
+    .navbar-collapse .ms-auto {
+        margin-left: 0 !important;
+        margin-top: 1rem; /* Add space above */
+        padding: 0 20px; /* Consistent padding */
+   }
+    .navbar-collapse form.ms-auto,
+    .navbar-collapse .navbar-cta-button.ms-auto,
+    .navbar-collapse .navbar-social-icons.ms-auto {
+        margin-top: 1rem;
+        padding: 0 20px 10px 20px; /* Padding for these sections */
+    }
+    .navbar-collapse .navbar-cta-button .btn {
+        width: 100%; /* Full width button on mobile */
+    }
+    .navbar-collapse .navbar-social-icons {
+        justify-content: center; /* Center icons on mobile */
+        border-top: 1px solid var(--border-color);
+        padding-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+/* --- Specific Navbar Variations --- */
+
+/* 1. Simple Responsive Navbar */
+/* .navbar-simple uses base styles */
+
+/* 2. Centered Logo / Split / Centered Brand Text (Shared Desktop Logic) */
+.navbar-logo-center .navbar-container,
+.navbar-split .navbar-container,
+.navbar-brand-text-center .navbar-container {
+  position: relative; /* Context for absolute centering */
+}
+
+.navbar-logo-center .navbar-brand.centered,
+.navbar-split .navbar-brand.centered,
+.navbar-brand-text-center .navbar-brand.centered-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Above segments, below toggler */
+}
+
+.navbar-logo-center .navbar-segment, /* Used for Split/Center Brand Text */
+.navbar-split .navbar-segment,
+.navbar-brand-text-center .navbar-segment {
+  display: flex;
+  align-items: center;
+  flex-basis: calc(50% - 100px); /* Adjust 100px based on logo/brand width + spacing */
+}
+.navbar-logo-center .segment-left,
+.navbar-split .segment-left,
+.navbar-brand-text-center .segment-left {
+  justify-content: flex-start;
+}
+.navbar-logo-center .segment-right,
+.navbar-split .segment-right,
+.navbar-brand-text-center .segment-right {
+  justify-content: flex-end;
+}
+.navbar-logo-center .navbar-nav, /* Ensure navs within segments don't push */
+.navbar-split .navbar-nav,
+.navbar-brand-text-center .navbar-nav {
+  margin-left: 0;
+}
+
+/* Hide desktop segments on mobile */
+@media (max-width: 768px) {
+  .navbar-logo-center .navbar-segment,
+  .navbar-split .navbar-segment,
+  .navbar-brand-text-center .navbar-segment {
+    display: none;
+  }
+  .navbar-logo-center .navbar-brand.centered,
+  .navbar-split .navbar-brand.centered,
+  .navbar-brand-text-center .navbar-brand.centered-text {
+      position: static;
+      transform: none;
+      margin-right: auto; /* Default mobile brand position */
+      order: 1;
+  }
+  .navbar-brand-text-center .navbar-brand.centered-text {
+      font-size: 1.2rem; /* Adjust mobile size */
+  }
+  /* Mobile menu (.navbar-collapse) will contain all links */
+}
+
+/* 3. Navbar with Search */
+.navbar-search .navbar-collapse {
+  gap: 20px; /* Space between nav and search */
+}
+.navbar-search-form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-input {
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-width: 150px;
+}
+.search-button {
+  padding: 6px 10px;
+  border: none;
+  background-color: var(--purple-color);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.search-button:hover {
+    background-color: var(--purple-dark);
+}
+@media (max-width: 768px) {
+    .navbar-search-form { width: 100%; }
+    .search-input { flex-grow: 1; }
+}
+
+/* 4. Navbar with CTA Button */
+.navbar-cta .navbar-collapse {
+  gap: 20px;
+}
+.navbar-cta-button {
+  padding-left: 15px; /* Space from nav items */
+}
+.btn-small { /* If not already defined */
+  padding: 6px 14px; font-size: 0.85rem;
+}
+
+/* 5. Navbar with Dropdown */
+.nav-item.dropdown { position: relative; }
+.dropdown-menu {
+  display: none;
+  opacity: 0; /* Add opacity transition */
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 180px;
+  padding: 8px 0;
+  margin: 5px 0 0; /* Slightly larger gap */
+  list-style: none;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+@media (min-width: 769px) {
+  .nav-item.dropdown:hover > .dropdown-menu,
+  .nav-item.dropdown:focus-within > .dropdown-menu { /* Improved accessibility */
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-color);
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+.dropdown-item:hover {
+  background-color: var(--code-bg);
+  color: var(--purple-color);
+}
+.dropdown-divider {
+  height: 1px; margin: 8px 0; overflow: hidden; background-color: var(--border-color);
+}
+.dropdown-toggle::after {
+    content: ' ▼'; font-size: 0.7em; vertical-align: middle; margin-left: 4px; display: inline-block;
+}
+@media (max-width: 768px) {
+  .dropdown-menu {
+      position: static; box-shadow: none; border: none; background: none;
+      padding-left: 20px; /* Indent mobile dropdown items */
+      display: none; /* Hide sub-menu until parent is active */
+      border-top: 1px dashed var(--border-color);
+      margin-top: 0; padding-top: 0; opacity: 1; visibility: visible;
+      min-width: auto;
+  }
+  .dropdown-item { padding: 10px 20px; border-bottom: none; }
+  .dropdown-toggle::after { display: none; }
+  .navbar-collapse.active .dropdown-menu { /* Show when main menu is open */
+        display: block;
+  }
+}
+
+/* 6. Sticky Top Navbar */
+.navbar-sticky {
+  position: sticky; top: 0; z-index: 1020; /* Standard sticky z-index */
+  /* Add background/shadow if needed, already has base bg */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* 7. Transparent Navbar */
+.navbar-transparent {
+  background-color: transparent;
+  position: absolute; /* Position over content initially */
+  top: 0; left: 0; width: 100%; z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+.navbar-transparent .navbar-brand,
+.navbar-transparent .nav-link,
+.navbar-transparent .navbar-toggler .toggler-icon {
+  color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+.navbar-transparent .navbar-toggler { border-color: rgba(255, 255, 255, 0.5); }
+.navbar-transparent .toggler-icon { background-color: #fff; }
+.navbar-transparent .nav-link:hover { background-color: rgba(255,255,255,0.1); color: #fff;}
+.navbar-transparent .nav-link.active { color: #fff; font-weight: bold;}
+
+.navbar-transparent.scrolled { /* Add this class via JS on scroll */
+  background-color: var(--card-bg);
+  position: fixed; /* Becomes fixed when scrolled */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-bottom-color: var(--border-color);
+  & .navbar-brand, & .nav-link { color: var(--text-color); text-shadow: none;}
+  & .nav-link:hover { color: var(--text-color); background-color: var(--code-bg);}
+  & .nav-link.active { color: var(--purple-color); }
+  & .navbar-toggler { border-color: var(--border-color); }
+  & .toggler-icon { background-color: var(--text-color); }
+}
+@media (max-width: 768px) {
+    /* Mobile menu always gets a background when open */
+  .navbar-transparent .navbar-collapse.active {
+      background-color: var(--card-bg);
+      /* Reset link colors inside mobile menu */
+       & .nav-link { color: var(--text-secondary); text-shadow: none; }
+       & .nav-link:hover { color: var(--text-color); }
+       & .nav-link.active { color: var(--purple-color); }
+  }
+}
+
+/* 8. Navbar with Social Icons (REVISED CSS) */
+/* Desktop */
+.navbar-social .navbar-collapse {
+  display: flex; /* Ensure flex display */
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Take full available width */
+  justify-content: flex-start; /* Align nav items left by default */
+}
+.navbar-social .navbar-nav {
+  margin-left: 0; /* Override default push */
+  flex-grow: 1; /* Allow nav items to take available space initially */
+}
+.navbar-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 1.5rem; /* Use margin for spacing, not auto positioning */
+  flex-shrink: 0; /* Prevent icons shrinking */
+}
+.navbar-social-icons a {
+  color: var(--text-secondary);
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.navbar-social-icons a:hover {
+  color: var(--purple-color);
+  transform: scale(1.1);
+}
+.navbar-social-icons svg {
+  width: 20px; height: 20px;
+  fill: currentColor;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar-social .navbar-collapse.active { /* Styles when mobile menu is open */
+    align-items: stretch; /* Override center align for stacking */
+  }
+  .navbar-social .navbar-nav {
+        flex-grow: 0; /* Reset grow */
+        width: 100%; /* Take full width */
+  }
+  .navbar-social-icons {
+        margin-left: 0; /* Reset desktop margin */
+        margin-top: 15px;
+        padding: 15px 20px 5px 20px; /* Add padding and space */
+        justify-content: center; /* Center icons */
+        border-top: 1px solid var(--border-color);
+        width: 100%; /* Ensure full width */
+  }
+}
+
+/* 9. Split Links Navbar (REVISED CSS) */
+/* Desktop */
+.navbar-split .navbar-container {
+    position: relative; /* Needed for absolute brand */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Key for splitting */
+}
+.navbar-split .navbar-brand.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure above background, below potential toggler */
+}
+.navbar-split .navbar-segment { /* Wrapper for left/right nav lists */
+    display: flex;
+    align-items: center;
+    flex-basis: calc(50% - 100px); /* Adjust 100px based on brand width + padding */
+    flex-shrink: 1; /* Allow shrinking */
+}
+.navbar-split .segment-left {
+    justify-content: flex-start;
+}
+.navbar-split .segment-right {
+    justify-content: flex-end;
+}
+.navbar-split .navbar-nav { /* Style nav lists within segments */
+    margin-left: 0; /* Reset default */
+    gap: 5px;
+}
+/* Hide desktop segments, show mobile collapse container */
+@media (max-width: 768px) {
+    .navbar-split .navbar-segment {
+        display: none;
+    }
+    .navbar-split .navbar-brand.centered {
+        position: static;
+        transform: none;
+        order: 1; /* Place brand */
+        margin-right: auto; /* Push to left */
+    }
+    .navbar-split .navbar-toggler { order: 2; } /* Toggler */
+    .navbar-split .navbar-collapse { order: 3; } /* Collapsed menu container */
+
+    .navbar-split .navbar-collapse.active .navbar-nav {
+          /* Style all nav items together in mobile */
+          align-items: stretch; /* Ensure links take full width */
+    }
+      .navbar-split .navbar-collapse.active .nav-link {
+          text-align: left; /* Or center */
+    }
+}
+
+/* 10. Minimalist Icon Navbar */
+.navbar-minimal .navbar-brand.icon-brand { padding: 0; line-height: 0; }
+.navbar-minimal .navbar-brand.icon-brand svg {
+  display: block; width: 32px; height: 32px; color: var(--purple-color);
+}
+.navbar-minimal .navbar-collapse { justify-content: flex-end; }
+.navbar-minimal .navbar-nav { margin-left: 0; } /* Reset default */
+@media (max-width: 768px) {
+    .navbar-minimal .navbar-brand { order: 1; margin-right: auto;}
+    .navbar-minimal .navbar-toggler { order: 2; margin-left: 1rem;} /* Ensure margin */
+    .navbar-minimal .navbar-collapse { order: 3; }
+}
+
+/* 11. Dark Background Navbar */
+:root { /* Define colors */
+  --navbar-dark-bg: #212529;
+  --navbar-dark-color: rgba(255, 255, 255, 0.75);
+  --navbar-dark-hover-color: #ffffff;
+  --navbar-dark-toggler-border: rgba(255, 255, 255, 0.15);
+  --navbar-dark-toggler-icon: rgba(255, 255, 255, 0.75);
+  --navbar-dark-border: #343a40;
+}
+.navbar-dark {
+  background-color: var(--navbar-dark-bg);
+  border-bottom-color: var(--navbar-dark-border);
+}
+.navbar-dark .navbar-brand, .navbar-dark .nav-link { color: var(--navbar-dark-color); }
+.navbar-dark .nav-link:hover, .navbar-dark .nav-link.active, .navbar-dark .navbar-brand:hover { color: var(--navbar-dark-hover-color); }
+.navbar-dark .navbar-toggler { border-color: var(--navbar-dark-toggler-border); }
+.navbar-dark .toggler-icon { background-color: var(--navbar-dark-toggler-icon); }
+.navbar-dark .nav-link:hover { background-color: rgba(255,255,255,0.05); }
+@media (max-width: 768px) {
+  .navbar-dark .navbar-collapse.active {
+    background-color: var(--navbar-dark-bg);
+    border-top-color: var(--navbar-dark-border);
+  }
+  .navbar-dark .nav-link { border-bottom-color: var(--navbar-dark-border); }
+  .navbar-dark .nav-item:last-child .nav-link { border-bottom: none; }
+}
+
+/* 12. Navbar with Centered Brand Text (REVISED CSS) */
+/* Desktop - Use same structure logic as Split Navbar */
+.navbar-brand-text-center .navbar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-brand-text-center .navbar-brand.centered-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    white-space: nowrap;
+    padding: 0 10px; /* Add padding around text */
+}
+.navbar-brand-text-center .navbar-segment {
+    display: flex;
+    align-items: center;
+      /* Estimate based on text width and padding + desired gap */
+    flex-basis: calc(50% - 120px);
+    flex-shrink: 1;
+}
+.navbar-brand-text-center .segment-left {
+    justify-content: flex-start;
+}
+.navbar-brand-text-center .segment-right {
+    justify-content: flex-end;
+}
+.navbar-brand-text-center .navbar-nav {
+    margin-left: 0;
+    gap: 5px;
+}
+/* Hide desktop segments, show mobile collapse container */
+@media (max-width: 768px) {
+    .navbar-brand-text-center .navbar-segment {
+        display: none;
+    }
+    .navbar-brand-text-center .navbar-brand.centered-text {
+        position: static;
+        transform: none;
+        order: 1; /* Place brand */
+        margin: 0 auto 10px auto; /* Center text element */
+        text-align: center;
+        width: 100%; /* Take full width for centering */
+        font-size: 1.2rem;
+    }
+      .navbar-brand-text-center .navbar-toggler {
+          order: 2;
+          /* Position toggler absolutely if needed, or adjust flex order */
+          position: absolute; /* Example: top-right corner */
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+    }
+    .navbar-brand-text-center .navbar-collapse { order: 3; margin-top: 5px; } /* Add margin below brand */
+    .navbar-brand-text-center .navbar-collapse.active .navbar-nav {
+          align-items: stretch;
+    }
+    .navbar-brand-text-center .navbar-collapse.active .nav-link {
+          text-align: left; /* Or center */
+    }
+}
+
+/* --- Ensure Button styles are loaded --- */
+/* If you haven't loaded button styles separately, add basic .btn styles here */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 10px 24px; font-size: 1rem; font-weight: 500;
+    border-radius: 9999px; cursor: pointer; transition: all 0.3s ease;
+    border: none; outline: none; text-decoration: none;
+}
+.btn-gradient { /* Example */
+    background: linear-gradient(135deg, var(--purple-color), #673ab7);
+    color: white; box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+}
+.btn-gradient:hover { transform: scale(1.03); }
+.btn-small { padding: 6px 14px; font-size: 0.85rem; }

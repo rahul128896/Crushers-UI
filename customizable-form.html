@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customizable Registration Form</title>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-card label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .form-card input[type="text"],
+    .form-card input[type="email"],
+    .form-card input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .form-card button {
+      width: 100%;
+      padding: 12px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .form-card button:hover {
+      background: #574fd6;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .form-footer a {
+      color: #6c63ff;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .social-buttons button {
+      flex: 1;
+      padding: 10px;
+      font-size: 0.85rem;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .google {
+      background: #db4437;
+    }
+
+    .linkedin {
+      background: #0077b5;
+    }
+
+    .github {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-card">
+    <h2>Register</h2>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" placeholder="John Doe" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="john@example.com" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password" />
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" placeholder="Confirm password" />
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" />
+        <label for="terms">I agree to the <a href="#">Terms</a> & <a href="#">Privacy Policy</a></label>
+      </div>
+
+      <button type="submit">Create Account</button>
+    </form>
+
+    <div class="social-buttons">
+      <button class="google">Sign up with Google</button>
+      <button class="linkedin">LinkedIn</button>
+      <button class="github">GitHub</button>
+    </div>
+
+    <div class="form-footer">
+      Already have an account? <a href="#">Log in</a>
+    </div>
+  </div>
+</body>
+</html>

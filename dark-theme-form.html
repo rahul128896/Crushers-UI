@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Theme Register</title>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .container h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 0.5rem;
+    }
+
+    .container p.subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .form-group input::placeholder {
+      color: #666;
+    }
+
+    .form-group .note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      margin-bottom: 1.5rem;
+      color: #ccc;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      accent-color: #a855f7;
+    }
+
+    .checkbox-group a {
+      color: #a855f7;
+      text-decoration: none;
+    }
+
+    .checkbox-group a:hover {
+      color: #c084fc;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #a855f7;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #9333ea;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      margin-top: 1.5rem;
+    }
+
+    .footer a {
+      color: #a855f7;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #c084fc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Create account</h2>
+    <p class="subtitle">Join our community of creators and innovators</p>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="John Doe" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="john@example.com" />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter password" />
+      <p class="note">Must be at least 8 characters</p>
+    </div>
+
+    <div class="checkbox-group">
+      <input id="terms" type="checkbox" />
+      <label for="terms">
+        I agree to the 
+        <a href="#">Terms of Service</a> and 
+        <a href="#">Privacy Policy</a>
+      </label>
+    </div>
+
+    <button class="btn">Create Account</button>
+
+    <div class="footer">
+      Already have an account? 
+      <a href="#">Sign in</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Component Gallery</title>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <link rel="stylesheet" href="css/cards.css"> <link rel="stylesheet" href="css/main.css">  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle theme">
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+    </button>
+  </div>
+
+  <header class="header">
+    <h1 class="title">Card Component Gallery</h1>
+    <p class="subtitle">A collection of beautiful, reusable card components with code examples</p>
+  </header>
+
+  <main class="container">
+    <section class="component-section">
+      <h2 class="section-title">Cards</h2>
+      <div class="component-grid">
+
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="card card-basic">
+              <div class="card-header">
+                <h3 class="card-title">Basic Card</h3>
+              </div>
+              <div class="card-body">
+                <p>This is a basic card component with header and body.</p>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Basic Card</h3>
+            <p class="component-description">Simple card with header and body sections</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-basic"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;h3 class="card-title"&gt;Basic Card&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;p&gt;This is a basic card component...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>/* Base .card styles in cards.css */
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+.card-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+.card-body {
+  padding: 20px;
+  flex-grow: 1; /* Allows body to fill space */
+}
+.card-title { /* Specific to card titles */
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+/* .card-basic doesn't need extra CSS if covered by base */
+</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="card card-image-top">
+              <img src="https://via.placeholder.com/400x200.png?text=Card+Image" alt="Placeholder Image" class="card-img-top">
+              <div class="card-body">
+                <h3 class="card-title">Image Card</h3>
+                <p>This card features an image at the top.</p>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Image Card (Top)</h3>
+            <p class="component-description">Card with a full-width image placed above the body</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-image-top"&gt;
+  &lt;img src="image.jpg" alt="..." class="card-img-top"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Image Card&lt;/h3&gt;
+    &lt;p&gt;Card content goes here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.card-image-top .card-img-top {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  /* Optional: if using non-8px radius */
+  /* border-top-left-radius: calc(8px - 1px); */
+  /* border-top-right-radius: calc(8px - 1px); */
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="card card-profile">
+              <div class="card-profile-header">
+                <img src="https://via.placeholder.com/100.png?text=Avatar" alt="User Avatar" class="card-avatar">
+              </div>
+              <div class="card-body text-center">
+                <h3 class="card-title">Jane Doe</h3>
+                <p class="text-secondary">Web Developer</p>
+                <p>Passionate about creating intuitive user experiences.</p>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Profile Card</h3>
+            <p class="component-description">Card designed to showcase a user profile with an avatar</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-profile"&gt;
+  &lt;div class="card-profile-header"&gt;
+    &lt;img src="avatar.png" alt="..." class="card-avatar"&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body text-center"&gt;
+    &lt;h3 class="card-title"&gt;Jane Doe&lt;/h3&gt;
+    &lt;p class="text-secondary"&gt;Web Developer&lt;/p&gt;
+    &lt;p&gt;Profile description...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.card-profile { align-items: center; } /* Center content */
+.card-profile-header {
+  padding-top: 20px;
+}
+.card-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--card-bg); /* Match card bg */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-bottom: -50px; /* Overlap body */
+  position: relative;
+  z-index: 1;
+}
+.card-profile .card-body {
+  padding-top: 60px; /* Space for overlapped avatar */
+}
+.text-center { text-align: center; }
+.text-secondary { color: var(--text-secondary); font-size: 0.9rem; }
+</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="card card-product">
+              <img src="https://via.placeholder.com/400x250.png?text=Product" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h3 class="card-title">Cool Gadget</h3>
+                <p class="card-product-price">$99.99</p>
+                <p>This amazing gadget does wonders. Highly recommended!</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-purple btn-small">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Product Card</h3>
+            <p class="component-description">Displays product info like image, title, price, and action</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-product"&gt;
+  &lt;img src="product.jpg" alt="..." class="card-img-top"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Cool Gadget&lt;/h3&gt;
+    &lt;p class="card-product-price"&gt;$99.99&lt;/p&gt;
+    &lt;p&gt;Product description...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;button class="btn btn-purple btn-small"&gt;Add to Cart&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.card-product .card-img-top { /* As in card-image-top */
+  width: 100%; height: auto; display: block;
+}
+.card-product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--purple-color);
+  margin-bottom: 10px;
+}
+.card-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-color);
+  background-color: rgba(0,0,0,0.03); /* Subtle bg */
+  text-align: right; /* Align button right */
+}
+[data-theme="dark"] .card-footer {
+  background-color: rgba(255,255,255,0.05);
+}
+.btn-small { /* Example utility class */
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+/* Ensure btn styles are loaded (e.g., from buttons CSS) */
+</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+         <div class="component-card">
+          <div class="component-preview">
+             <div class="card card-actions">
+              <div class="card-body">
+                <h3 class="card-title">Card with Actions</h3>
+                <p>This card includes action buttons or links in a footer.</p>
+              </div>
+              <div class="card-footer card-footer-actions">
+                <a href="#" class="card-link">Details</a>
+                <button class="btn btn-outline btn-small">Save</button>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Card with Actions</h3>
+            <p class="component-description">Card featuring a dedicated footer for buttons or links</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-actions"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;
+    &lt;p&gt;Card content...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer card-footer-actions"&gt;
+    &lt;a href="#" class="card-link"&gt;Details&lt;/a&gt;
+    &lt;button class="btn btn-outline btn-small"&gt;Save&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.card-footer-actions {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-color);
+  gap: 10px; /* Space between actions */
+}
+.card-link {
+  color: var(--purple-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card-link:hover {
+  text-decoration: underline;
+}
+/* Ensure btn and btn-small styles are loaded */</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="card card-horizontal">
+              <img src="https://via.placeholder.com/150x150.png?text=Thumb" alt="Thumbnail" class="card-img-left">
+              <div class="card-body">
+                <h3 class="card-title">Horizontal Card</h3>
+                <p>Content flows horizontally next to the image in this layout.</p>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Horizontal Card</h3>
+            <p class="component-description">Image on the left, content on the right. Good for lists.</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-horizontal"&gt;
+  &lt;img src="thumb.jpg" alt="..." class="card-img-left"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Horizontal Card&lt;/h3&gt;
+    &lt;p&gt;Card content...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.card-horizontal {
+  flex-direction: row; /* Override base card direction */
+  align-items: stretch; /* Stretch items vertically */
+}
+.card-horizontal .card-img-left {
+  width: 120px; /* Fixed width for image */
+  height: auto;
+  object-fit: cover; /* Cover the area */
+  flex-shrink: 0; /* Prevent image shrinking */
+  /* Optional: if using non-8px radius */
+  /* border-top-left-radius: calc(8px - 1px); */
+  /* border-bottom-left-radius: calc(8px - 1px); */
+}
+.card-horizontal .card-body {
+  border-left: 1px solid var(--border-color);
+  padding: 16px; /* Adjust padding */
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+         <div class="component-card">
+          <div class="component-preview">
+            <div class="card card-icon-header">
+               <div class="card-header card-header-icon">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                 <h3 class="card-title">Secure Information</h3>
+               </div>
+               <div class="card-body">
+                 <p>This card uses an icon in the header for visual context.</p>
+               </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Icon Header Card</h3>
+            <p class="component-description">Features an icon alongside the title in the header</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-icon-header"&gt;
+  &lt;div class="card-header card-header-icon"&gt;
+    &lt;!-- SVG Icon --&gt;
+    &lt;svg&gt;...&lt;/svg&gt;
+    &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;p&gt;Card content...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.card-header-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and title */
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+.card-header-icon svg {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+  color: var(--purple-color); /* Color the icon */
+  flex-shrink: 0;
+}
+.card-header-icon .card-title {
+  margin: 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="card card-notification card-success">
+               <div class="card-body">
+                 <h3 class="card-title">Success!</h3>
+                 <p>Your operation completed successfully.</p>
+               </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Notification Card</h3>
+            <p class="component-description">Card styled for alerts/notifications (e.g., success, error)</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-notification card-success"&gt;
+   &lt;div class="card-body"&gt;
+     &lt;h3 class="card-title"&gt;Success!&lt;/h3&gt;
+     &lt;p&gt;Your operation completed successfully.&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Variations: card-error, card-warning, card-info --&gt;
+</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>/* Define notification colors (add to :root if preferred) */
+:root {
+  --success-color: #28a745; --success-bg: rgba(40, 167, 69, 0.1);
+  --error-color: #dc3545;   --error-bg: rgba(220, 53, 69, 0.1);
+  --warning-color: #ffc107; --warning-bg: rgba(255, 193, 7, 0.1);
+  --info-color: #17a2b8;    --info-bg: rgba(23, 162, 184, 0.1);
+}
+
+.card-notification {
+  border-left-width: 5px; /* Thick left border */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.card-notification .card-body { padding: 16px 20px; }
+.card-notification .card-title { margin-bottom: 5px; }
+
+.card-success {
+  border-left-color: var(--success-color);
+  background-color: var(--success-bg);
+}
+.card-success .card-title { color: var(--success-color); }
+
+/* Add .card-error, .card-warning, .card-info similarly */
+.card-error {
+  border-left-color: var(--error-color);
+  background-color: var(--error-bg);
+}
+.card-error .card-title { color: var(--error-color); }
+
+/* ... etc for warning and info */
+</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <div class="card card-pricing">
+               <div class="card-header text-center">
+                 <h3 class="card-title">Pro Plan</h3>
+                 <p class="card-price"><span class="price-amount">$29</span>/month</p>
+               </div>
+               <div class="card-body">
+                 <ul class="feature-list">
+                   <li>Feature One</li>
+                   <li>Feature Two</li>
+                   <li>24/7 Support</li>
+                 </ul>
+               </div>
+               <div class="card-footer text-center">
+                  <button class="btn btn-gradient">Choose Plan</button>
+               </div>
+             </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Pricing Tier Card</h3>
+            <p class="component-description">Card for displaying pricing plans with features and CTA</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-pricing"&gt;
+  &lt;div class="card-header text-center"&gt;
+    &lt;h3 class="card-title"&gt;Pro Plan&lt;/h3&gt;
+    &lt;p class="card-price"&gt;&lt;span class="price-amount"&gt;$29&lt;/span&gt;/month&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;ul class="feature-list"&gt;
+      &lt;li&gt;Feature One&lt;/li&gt;
+      &lt;li&gt;Feature Two&lt;/li&gt;
+      &lt;li&gt;24/7 Support&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer text-center"&gt;
+     &lt;button class="btn btn-gradient"&gt;Choose Plan&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.card-pricing .card-header { border-bottom: none; }
+.card-pricing .text-center { text-align: center; }
+.card-price {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+.card-price .price-amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 5px;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.feature-list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+.feature-list li:last-child { border-bottom: none; }
+.card-pricing .card-footer { border-top: none; padding: 20px; }
+/* Ensure .btn styles are loaded */
+</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <div class="card card-testimonial">
+                <div class="card-body">
+                  <p class="testimonial-quote">"This product is absolutely amazing! It solved all my problems. Highly recommended to everyone."</p>
+                </div>
+                <div class="card-footer testimonial-author">
+                  <img src="https://via.placeholder.com/50.png?text=A" alt="Author Avatar" class="card-avatar small">
+                  <div class="author-info">
+                    <span class="author-name">Alex Johnson</span>
+                    <span class="author-title">Satisfied Customer</span>
+                  </div>
+                </div>
+             </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Testimonial Card</h3>
+            <p class="component-description">Highlights a customer quote with author attribution</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-testimonial"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;p class="testimonial-quote"&gt;"Quote goes here..."&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer testimonial-author"&gt;
+    &lt;img src="avatar.png" alt="..." class="card-avatar small"&gt;
+    &lt;div class="author-info"&gt;
+      &lt;span class="author-name"&gt;Alex Johnson&lt;/span&gt;
+      &lt;span class="author-title"&gt;Satisfied Customer&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.testimonial-quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+.testimonial-quote::before {
+  content: '“';
+  font-size: 3rem;
+  position: absolute;
+  left: -10px; top: -10px;
+  color: var(--purple-color);
+  opacity: 0.3;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-color);
+}
+.card-avatar.small {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+}
+.author-info { display: flex; flex-direction: column; }
+.author-name { font-weight: 600; }
+.author-title { font-size: 0.85rem; color: var(--text-secondary); }
+</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <div class="card card-stats">
+               <div class="card-body">
+                 <div class="stat-icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                 </div>
+                 <div class="stat-content">
+                   <p class="stat-number">1,234</p>
+                   <p class="stat-label">Active Users</p>
+                 </div>
+               </div>
+             </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Stats Card</h3>
+            <p class="component-description">Compact card for displaying key statistics or numbers</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-stats"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;div class="stat-icon"&gt;
+      &lt;!-- SVG Icon --&gt;
+      &lt;svg&gt;...&lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class="stat-content"&gt;
+      &lt;p class="stat-number"&gt;1,234&lt;/p&gt;
+      &lt;p class="stat-label"&gt;Active Users&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.card-stats .card-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+.stat-icon svg {
+  width: 36px; height: 36px;
+  color: var(--purple-color);
+}
+.stat-content { flex-grow: 1; }
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card component-card-glass-preview"> <div class="component-preview">
+             <div class="card card-glass">
+               <div class="card-body">
+                 <h3 class="card-title">Glass Card</h3>
+                 <p>A card with a frosted glass effect using backdrop-filter.</p>
+               </div>
+             </div>
+           </div>
+          <div class="component-info">
+            <h3 class="component-title">Glassmorphism Card</h3>
+            <p class="component-description">Modern card with blur and transparency effects</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="card card-glass"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Glass Card&lt;/h3&gt;
+    &lt;p&gt;Card content...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>/* Make component preview have a background image for effect */
+.component-card-glass-preview .component-preview {
+ background: url('https://via.placeholder.com/400x200/8e44ad/ffffff?text=Background') center/cover;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: var(--text-color-dark); /* Usually looks best with light text */
+}
+/* Ensure light text in light mode too if needed */
+[data-theme="light"] .card-glass {
+  color: var(--text-color-light); /* Or force dark text if bg lightens */
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.card-glass .card-title { color: inherit; } /* Inherit card text color */
+.card-glass .card-body { padding: 20px; }
+</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div> </section> </main>
+
+  <script src="js/script.js"></script> </body>
+</html>

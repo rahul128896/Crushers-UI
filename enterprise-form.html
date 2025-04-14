@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enterprise Registration</title>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .card {
+      width: 100%;
+      max-width: 800px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .card-header {
+      background: #edf2f7;
+      padding: 20px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .card-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .card-description {
+      font-size: 1rem;
+      color: #718096;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .tabs a {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #4a5568;
+      background: #f7fafc;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .tabs a.active {
+      background: #e2e8f0;
+      color: #2d3748;
+    }
+    .form-container {
+      padding: 20px;
+    }
+    .form-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .form-section > div {
+      flex: 1 1 45%;
+    }
+    .form-section input,
+    .form-section select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #d2d6dc;
+    }
+    .form-footer {
+      padding: 20px;
+      border-top: 1px solid #e2e8f0;
+      background: #edf2f7;
+    }
+    .form-footer label {
+      font-size: 0.875rem;
+      color: #4a5568;
+    }
+    .form-footer a {
+      color: #3182ce;
+      text-decoration: none;
+    }
+    .form-footer button {
+      width: 100%;
+      padding: 12px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.125rem;
+    }
+    .form-footer button:hover {
+      background: #357abd;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="flex justify-between">
+        <div>
+          <div class="card-title">Enterprise Registration</div>
+          <div class="card-description">Create your organization account</div>
+        </div>
+        <div>
+          <a href="#" class="btn-link">Already registered? Sign in</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="tabs">
+      <a href="#" class="active" id="org-tab">Organization</a>
+      <a href="#" id="admin-tab">Admin Account</a>
+    </div>
+    
+    <div class="form-container" id="organization-form">
+      <div class="form-section">
+        <div>
+          <label for="company">Company Name</label>
+          <input type="text" id="company" placeholder="Acme Inc." />
+        </div>
+        <div>
+          <label for="website">Company Website</label>
+          <input type="url" id="website" placeholder="https://example.com" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div>
+          <label for="industry">Industry</label>
+          <select id="industry">
+            <option value="technology">Technology</option>
+            <option value="finance">Finance</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="education">Education</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="size">Company Size</label>
+          <select id="size">
+            <option value="1-10">1-10 employees</option>
+            <option value="11-50">11-50 employees</option>
+            <option value="51-200">51-200 employees</option>
+            <option value="201-500">201-500 employees</option>
+            <option value="501+">501+ employees</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div>
+          <label for="address">Business Address</label>
+          <input type="text" id="address" placeholder="123 Business St." />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div>
+          <label for="city">City</label>
+          <input type="text" id="city" placeholder="New York" />
+        </div>
+        <div>
+          <label for="state">State/Province</label>
+          <input type="text" id="state" placeholder="NY" />
+        </div>
+        <div>
+          <label for="zip">Postal Code</label>
+          <input type="text" id="zip" placeholder="10001" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-container" id="admin-form" style="display: none;">
+      <div class="form-section">
+        <div>
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="John" />
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Doe" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div>
+          <label for="email">Work Email</label>
+          <input type="email" id="email" placeholder="john@example.com" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" placeholder="+1 (555) 123-4567" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div>
+          <label for="jobTitle">Job Title</label>
+          <input type="text" id="jobTitle" placeholder="CTO" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+        </div>
+        <div>
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-footer">
+      <div class="checkbox">
+        <input type="checkbox" id="terms" />
+        <label for="terms">
+          I agree to the <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, and <a href="#">Data Processing Agreement</a>
+        </label>
+      </div>
+      <button>Create Enterprise Account</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('org-tab').addEventListener('click', () => {
+      document.getElementById('organization-form').style.display = 'block';
+      document.getElementById('admin-form').style.display = 'none';
+      document.getElementById('org-tab').classList.add('active');
+      document.getElementById('admin-tab').classList.remove('active');
+    });
+
+    document.getElementById('admin-tab').addEventListener('click', () => {
+      document.getElementById('organization-form').style.display = 'none';
+      document.getElementById('admin-form').style.display = 'block';
+      document.getElementById('admin-tab').classList.add('active');
+      document.getElementById('org-tab').classList.remove('active');
+    });
+  </script>
+</body>
+</html>

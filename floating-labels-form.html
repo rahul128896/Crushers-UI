@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Floating Labels Register</title>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #2d2d2d, #1a1a1a);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 400px;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+
+    .form-header {
+      text-align: center;
+      padding: 24px;
+    }
+
+    .form-header h2 {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .form-header p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .form-body {
+      padding: 24px;
+    }
+
+    .floating-group {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .floating-group input {
+      width: 100%;
+      padding: 16px 12px 12px 12px;
+      font-size: 14px;
+      background-color: #2b2b2b;
+      border: 1px solid #444;
+      border-radius: 8px;
+      color: white;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .floating-group input:focus {
+      border-color: #a855f7;
+      box-shadow: 0 0 0 2px #a855f777;
+    }
+
+    .floating-group label {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #bbb;
+      background-color: transparent;
+      padding: 0 4px;
+      transition: 0.2s ease;
+      pointer-events: none;
+    }
+
+    .floating-group input:focus + label,
+    .floating-group input:not(:placeholder-shown) + label {
+      top: 8px;
+      font-size: 12px;
+      color: #a855f7;
+      background-color: #1a1a1a;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 24px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      accent-color: #a855f7;
+    }
+
+    .checkbox-group a {
+      color: #a855f7;
+      text-decoration: none;
+    }
+
+    .checkbox-group a:hover {
+      text-decoration: underline;
+    }
+
+    .form-footer {
+      padding: 24px;
+      text-align: center;
+    }
+
+    .form-footer button {
+      width: 100%;
+      padding: 14px;
+      background-color: #a855f7;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-footer button:hover {
+      background-color: #9333ea;
+    }
+
+    .form-footer .signin-link {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .form-footer .signin-link a {
+      color: #a855f7;
+      text-decoration: none;
+    }
+
+    .form-footer .signin-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <h2>Join us today</h2>
+      <p>Create your account to get started</p>
+    </div>
+
+    <div class="form-body">
+      <div class="floating-group">
+        <input type="text" id="name" placeholder=" " required />
+        <label for="name">Full Name</label>
+      </div>
+
+      <div class="floating-group">
+        <input type="email" id="email" placeholder=" " required />
+        <label for="email">Email Address</label>
+      </div>
+
+      <div class="floating-group">
+        <input type="password" id="password" placeholder=" " required />
+        <label for="password">Password</label>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" />
+        <label for="terms">
+          I agree to the
+          <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-footer">
+      <button>Create Account</button>
+      <div class="signin-link">
+        Already have an account?
+        <a href="#">Sign in</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimalist Register</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .container h2 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .container p {
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+
+    .form-group input:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+      outline: none;
+    }
+
+    .terms {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+    .terms a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .terms a:hover {
+      text-decoration: underline;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #7c3aed;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.2s;
+    }
+
+    .submit-btn:hover {
+      background-color: #6d28d9;
+    }
+
+    .signin-link {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .signin-link a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .signin-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Create an account</h2>
+    <p>Enter your details to create your account</p>
+
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="John Doe" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="john@example.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••" />
+      </div>
+
+      <div class="terms">
+        <input type="checkbox" id="terms" />
+        <label for="terms">
+          I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Create Account</button>
+    </form>
+
+    <div class="signin-link">
+      Already have an account? <a href="#">Sign in</a>
+    </div>
+  </div>
+
+</body>
+</html>

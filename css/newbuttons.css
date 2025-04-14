@@ -1,0 +1,248 @@
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 9999px; /* Makes it a pill shape */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  text-decoration: none; /* Ensure no underlines from links */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+/* === ORIGINAL BUTTON STYLES === */
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, var(--purple-color), #673ab7); /* Use CSS variable */
+  color: white;
+  box-shadow: 0 4px 20px rgba(156, 39, 176, 0.4);
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+}
+
+.btn-purple {
+  background: var(--purple-color);
+  color: white;
+}
+
+.btn-purple:hover {
+  background: var(--purple-dark);
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--purple-color);
+}
+
+.btn-outline:hover {
+  background: var(--purple-color);
+  color: white;
+}
+
+.btn-bubble {
+  background: white;
+  color: var(--dark-color-light); /* Usually paired with light background */
+  border-radius: 16px; /* Slightly less rounded */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+[data-theme="dark"] .btn-bubble {
+    background: var(--card-bg-dark); /* Adjust for dark theme if needed */
+    color: var(--text-color-dark);
+}
+
+
+.btn-bubble:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.btn-icon {
+  display: flex; /* Already handled by .btn's inline-flex, but ensures consistency */
+  align-items: center;
+  justify-content: center;
+  background: var(--purple-color);
+  color: white;
+}
+
+.btn-icon .icon {
+  margin-right: 8px;
+}
+
+.btn-icon:hover {
+  background: var(--purple-dark);
+}
+
+/* === ADDED BUTTON STYLES === */
+
+.btn-neon {
+  background-color: var(--purple-color);
+  color: white;
+  box-shadow: 0 0 5px var(--purple-color), 0 0 10px var(--purple-color);
+  transition: all 0.3s ease, box-shadow 0.3s ease-in-out; /* Ensure box-shadow transitions */
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 10px var(--purple-color), 0 0 25px var(--purple-color), 0 0 40px var(--purple-color);
+  background-color: var(--purple-dark);
+}
+
+.btn-border-anim {
+  background: none;
+  border: 2px solid transparent; /* Start transparent */
+  color: var(--purple-color);
+  position: relative; /* Needed for pseudo-element positioning */
+  overflow: hidden; /* Hide overflowing pseudo-elements initially */
+  z-index: 1; /* Ensure button content is above pseudo-elements */
+}
+
+.btn-border-anim span {
+  position: relative;
+  z-index: 2; /* Keep text above the animated border */
+}
+
+.btn-border-anim::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--purple-color);
+  border-radius: 9999px; /* Match button's border-radius */
+  transform: scale(1.1); /* Start slightly larger */
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth transition */
+  z-index: -1; /* Place behind the button content */
+}
+
+.btn-border-anim:hover::before {
+  transform: scale(1); /* Scale down to normal size */
+  opacity: 1;
+}
+
+.btn-border-anim:hover {
+  color: var(--purple-dark); /* Optional: change text color */
+}
+
+.btn-3d {
+  background-color: #5e35b1; /* Slightly darker purple base - adjust as needed */
+  color: white;
+  border: none; /* Remove default border */
+  border-bottom: 4px solid #311b92; /* Darkest purple for shadow - adjust as needed */
+  transition: all 0.1s ease-in-out; /* Quick transition for push effect */
+}
+
+.btn-3d:hover {
+  background-color: #673ab7; /* Lighter purple on hover - adjust as needed */
+}
+
+.btn-3d:active { /* Style for when the button is clicked */
+  transform: translateY(2px); /* Move button down */
+  border-bottom-width: 2px; /* Reduce bottom border size */
+  box-shadow: 0 2px 0 #311b92; /* Add a subtle shadow to enhance the effect */
+}
+
+.btn-underline {
+  background: none;
+  border: none;
+  color: var(--purple-color);
+  padding-bottom: 12px; /* Add padding to make space for the underline */
+  position: relative; /* For positioning the pseudo-element */
+  overflow: visible; /* Allow pseudo-element to be visible outside padding */
+}
+
+.btn-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Center the starting point */
+  bottom: 6px; /* Position the underline below the text */
+  width: 0; /* Start with no width */
+  height: 2px;
+  background-color: var(--purple-color);
+  transition: all 0.3s ease-out;
+  transform: translateX(-50%); /* Keep centered as it grows */
+}
+
+.btn-underline:hover::after {
+  width: 70%; /* Animate width on hover */
+}
+
+.btn-underline:hover {
+  color: var(--purple-dark); /* Optional: darken text color */
+}
+
+.btn-skew {
+  background: linear-gradient(45deg, var(--purple-color), #673ab7); /* Gradient background */
+  color: white;
+  transform: skewX(-15deg); /* Apply skew */
+  border: none;
+}
+
+.btn-skew span {
+  display: inline-block; /* Necessary for nested transform */
+  transform: skewX(15deg); /* Counter-skew the text */
+}
+
+.btn-skew:hover {
+  background: linear-gradient(45deg, var(--purple-dark), #5e35b1); /* Darker gradient on hover */
+  transform: skewX(-15deg) scale(1.05); /* Add a subtle scale effect */
+}
+
+.btn-social {
+  background-color: #e9ecef; /* Default light grey background */
+  color: var(--dark-color-light); /* Use light theme dark color by default */
+  border: none;
+  font-weight: 600; /* Make text slightly bolder */
+}
+
+.btn-social .icon {
+  margin-right: 8px;
+  stroke: var(--dark-color-light); /* Match text color */
+}
+
+.btn-social:hover {
+  background-color: #ced4da; /* Slightly darker grey on hover */
+}
+
+/* Theme specific adjustments for Social Button */
+[data-theme="dark"] .btn-social {
+  background-color: #343a40; /* Darker grey for dark theme */
+  color: var(--text-color-dark); /* Use dark theme text color */
+}
+
+[data-theme="dark"] .btn-social .icon {
+   stroke: var(--text-color-dark); /* Match text color */
+}
+
+[data-theme="dark"] .btn-social:hover {
+  background-color: #495057; /* Slightly lighter dark grey */
+}
+
+/* === END OF ADDED BUTTON STYLES === */
+
+
+/* Card Styles (Example - if you had specific card styles here) */
+/* .card { ... } */
+/* .simple-card { ... } */
+/* .card-title { ... } */
+/* .card-text { ... } */

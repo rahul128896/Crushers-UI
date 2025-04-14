@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <title>Animated Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 500px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #764ba2;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #764ba2;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #5e3b9c;
+    }
+    .checkbox label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      color: #444;
+    }
+    .checkbox {
+      margin-top: 10px;
+    }
+    .social-signup {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-signup button {
+      margin: 5px;
+      background: #eee;
+      color: #333;
+      width: auto;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .login-link a {
+      color: #764ba2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Animated Registration</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" required>
+          I agree to the <a href="#">Terms & Conditions</a>
+        </label>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+
+    <div class="social-signup">
+      <p>Or sign up with</p>
+      <button>Google</button>
+      <button>LinkedIn</button>
+      <button>GitHub</button>
+    </div>
+
+    <div class="login-link">
+      <p>Already have an account? <a href="#">Log in</a></p>
+    </div>
+  </div>
+</body>
+</html>

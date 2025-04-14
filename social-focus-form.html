@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create an Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 4rem);
+      padding: 2rem 1rem;
+    }
+
+    .form-box {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtext {
+      text-align: center;
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-buttons button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      background-color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .social-buttons svg {
+      margin-right: 6px;
+    }
+
+    .separator {
+      position: relative;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .separator hr {
+      border: none;
+      border-top: 1px solid #d1d5db;
+      margin: 0;
+    }
+
+    .separator span {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffffff;
+      padding: 0 0.5rem;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    form .field {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: #374151;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .form-footer {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .form-footer a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 0.6rem;
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    .submit-btn:hover {
+      background-color: #1e40af;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h2>Create an account</h2>
+      <p class="subtext">Sign up using your social accounts or email</p>
+
+      <div class="social-buttons">
+        <button>
+          <!-- GitHub Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M8 8h8M8 12h8M8 16h8"/>
+          </svg>
+          GitHub
+        </button>
+        <button>
+          <!-- Twitter Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M8 8h8M8 12h8M8 16h8"/>
+          </svg>
+          Twitter
+        </button>
+        <button>
+          <!-- Facebook Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M8 8h8M8 12h8M8 16h8"/>
+          </svg>
+          Facebook
+        </button>
+      </div>
+
+      <div class="separator">
+        <hr />
+        <span>Or continue with</span>
+      </div>
+
+      <form action="#" method="POST">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="John Doe" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="john@example.com" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Account</button>
+
+        <div class="form-footer">
+          By creating an account, you agree to our
+          <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="form-footer" style="margin-top: 0.5rem;">
+          Already have an account?
+          <a href="#">Sign in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

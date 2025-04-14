@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Component Gallery</title>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <link rel="stylesheet" href="css/navbars.css"> <link rel="stylesheet" href="css/main.css">    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Ensure preview allows navbar full width and visibility */
+    .component-preview {
+      padding: 0;
+      min-height: 60px; /* Base navbar height */
+      overflow: visible; /* Allow dropdowns/mobile menus to show */
+      position: relative; /* Context for absolute positioned mobile menus */
+      background-color: var(--bg-color); /* Match page background */
+    }
+     /* Add specific background for transparent/glass demos */
+     .component-preview.preview-has-bg {
+         background: url('https://via.placeholder.com/600x100/777/fff?text=Background') center/cover;
+         border-radius: 8px; /* Match potential card radius */
+     }
+    .component-preview nav {
+        margin: 0;
+        width: 100%; /* Force navbar to take full preview width */
+    }
+    /* Prevent component card hover effect from clipping absolute menus */
+    .component-card {
+        overflow: visible;
+    }
+     .component-card:hover {
+         transform: none; /* Disable lift effect if it causes issues */
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Keep original shadow */
+     }
+
+  </style>
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle theme">
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+    </button>
+  </div>
+
+  <header class="header">
+    <h1 class="title">Navbar Component Gallery</h1>
+    <p class="subtitle">A collection of responsive navbar components with code examples</p>
+  </header>
+
+  <main class="container">
+    <section class="component-section">
+      <div class="component-grid">
+
+        <div class="component-card">
+          <div class="component-preview">
+            <nav class="navbar navbar-simple" aria-label="Simple navigation">
+              <div class="navbar-container">
+                <a href="#!" class="navbar-brand">BrandLogo</a>
+                <button class="navbar-toggler" type="button" aria-controls="navbarSimpleMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse" id="navbarSimpleMenu">
+                  <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#!" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">About</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Simple Responsive Navbar</h3>
+            <p class="component-description">Basic navbar with logo, links, and hamburger toggle.</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                 <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-logo-center" aria-label="Centered logo navigation">
+               <div class="navbar-container">
+                  <div class="navbar-segment segment-left">
+                     <ul class="navbar-nav">
+                       <li class="nav-item"><a href="#!" class="nav-link">Shop</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Blog</a></li>
+                     </ul>
+                  </div>
+                 <a href="#!" class="navbar-brand centered">CenterBrand</a>
+                  <div class="navbar-segment segment-right">
+                    <ul class="navbar-nav">
+                       <li class="nav-item"><a href="#!" class="nav-link">Contact</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Account</a></li>
+                    </ul>
+                  </div>
+                 <button class="navbar-toggler" type="button" aria-controls="navbarLogoCenterMenu" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                  <div class="navbar-collapse" id="navbarLogoCenterMenu">
+                     <ul class="navbar-nav">
+                       <li class="nav-item"><a href="#!" class="nav-link">Shop</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Blog</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Contact</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Account</a></li>
+                     </ul>
+                  </div>
+               </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Centered Logo Navbar</h3>
+            <p class="component-description">Navbar with the brand logo positioned in the center.</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                 <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-search" aria-label="Search navigation">
+               <div class="navbar-container">
+                 <a href="#!" class="navbar-brand">SearchCo</a>
+                 <button class="navbar-toggler" type="button" aria-controls="navbarSearchMenu" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                 <div class="navbar-collapse" id="navbarSearchMenu">
+                   <ul class="navbar-nav">
+                     <li class="nav-item"><a href="#!" class="nav-link">Home</a></li>
+                     <li class="nav-item"><a href="#!" class="nav-link">Products</a></li>
+                   </ul>
+                   <form class="navbar-search-form ms-auto" role="search"> <input class="search-input" type="search" placeholder="Search..." aria-label="Search">
+                     <button class="search-button" type="submit" aria-label="Submit search">Go</button>
+                   </form>
+                 </div>
+               </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Navbar with Search</h3>
+            <p class="component-description">Includes a search input field and button within the navbar.</p>
+             <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                 <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+         <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-cta" aria-label="CTA navigation">
+               <div class="navbar-container">
+                 <a href="#!" class="navbar-brand">ActionApp</a>
+                 <button class="navbar-toggler" type="button" aria-controls="navbarCtaMenu" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                 <div class="navbar-collapse" id="navbarCtaMenu">
+                   <ul class="navbar-nav">
+                     <li class="nav-item"><a href="#!" class="nav-link">Features</a></li>
+                     <li class="nav-item"><a href="#!" class="nav-link">Docs</a></li>
+                   </ul>
+                   <div class="navbar-cta-button ms-auto"> <button type="button" class="btn btn-gradient btn-small">Sign Up</button>
+                   </div>
+                 </div>
+               </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Navbar with CTA Button</h3>
+            <p class="component-description">Features a prominent call-to-action button.</p>
+             <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                 <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <nav class="navbar navbar-dropdown" aria-label="Dropdown navigation">
+              <div class="navbar-container">
+                 <a href="#!" class="navbar-brand">DropMenu</a>
+                 <button class="navbar-toggler" type="button" aria-controls="navbarDropMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                 <div class="navbar-collapse" id="navbarDropMenu">
+                   <ul class="navbar-nav">
+                      <li class="nav-item"><a href="#!" class="nav-link">Home</a></li>
+                      <li class="nav-item dropdown">
+                        <a href="#!" class="nav-link dropdown-toggle" id="navbarDropdownProductsLink" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductsLink">
+                          <li><a class="dropdown-item" href="#!">Product 1</a></li>
+                          <li><a class="dropdown-item" href="#!">Product 2</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#!">Special Offer</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item"><a href="#!" class="nav-link">Contact</a></li>
+                   </ul>
+                 </div>
+              </div>
+            </nav>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Navbar with Dropdown</h3>
+            <p class="component-description">Simple CSS hover dropdown (desktop), static list (mobile).</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                 <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-sticky" aria-label="Sticky navigation">
+               <div class="navbar-container">
+                  <a href="#!" class="navbar-brand">StickyNav</a>
+                  <button class="navbar-toggler" type="button" aria-controls="navbarStickyMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                 <div class="navbar-collapse" id="navbarStickyMenu">
+                   <ul class="navbar-nav">
+                      <li class="nav-item"><a href="#!" class="nav-link">Link 1</a></li>
+                      <li class="nav-item"><a href="#!" class="nav-link">Link 2</a></li>
+                   </ul>
+                 </div>
+               </div>
+             </nav>
+             <div style="height: 100px; padding: 20px; color: var(--text-secondary); text-align:center; font-size: 0.9em;">(Requires page scroll context)</div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Sticky Top Navbar (Style)</h3>
+            <p class="component-description">Styled for `position: sticky` (behavior needs page context).</p>
+             <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                 <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview preview-has-bg"> <nav class="navbar navbar-transparent" aria-label="Transparent navigation">
+               <div class="navbar-container">
+                  <a href="#!" class="navbar-brand">OverlayNav</a>
+                   <button class="navbar-toggler" type="button" aria-controls="navbarTransMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                 <div class="navbar-collapse" id="navbarTransMenu">
+                    <ul class="navbar-nav">
+                      <li class="nav-item"><a href="#!" class="nav-link">Gallery</a></li>
+                      <li class="nav-item"><a href="#!" class="nav-link">About</a></li>
+                   </ul>
+                 </div>
+               </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Transparent Navbar (Initial)</h3>
+            <p class="component-description">Transparent background for use over images/video.</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                 <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-social" aria-label="Social media navigation">
+               <div class="navbar-container">
+                  <a href="#!" class="navbar-brand">Connect</a>
+                   <button class="navbar-toggler" type="button" aria-controls="navbarSocialMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                 <div class="navbar-collapse" id="navbarSocialMenu">
+                   <ul class="navbar-nav">
+                      <li class="nav-item"><a href="#!" class="nav-link">Home</a></li>
+                      <li class="nav-item"><a href="#!" class="nav-link">Blog</a></li>
+                   </ul>
+                   <div class="navbar-social-icons ms-auto"> <a href="#!" aria-label="Facebook" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                      <a href="#!" aria-label="Twitter" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 4s-.7 2.1-2.1 3.1c1.1-.6 2.3-1.5 3.1-2.6C22.3 5.9 21 7 19.6 7.9c-1.1-1.2-2.7-2-4.5-2C10.3 5.9 6 10.1 6 15c0 .4 0 .8.1 1.2-4.3-.2-8.1-2.3-10.6-5.4-.4.7-.7 1.6-.7 2.5 0 2.6 1.3 4.8 3.3 6.1-.9-.1-1.9-.4-2.8-.8v.1c0 3.6 2.5 6.5 5.9 7.2-.6.2-1.2.2-1.9.2-.5 0-1 0-1.4-.1 1 2.9 3.7 5 6.9 5.1-2.7 2.1-6.1 3.4-9.8 3.4-.6 0-1.2 0-1.8-.1 3.4 2.2 7.5 3.5 11.9 3.5 9.1 0 14.1-7.5 14.1-14.1v-.6c1-.7 1.8-1.6 2.5-2.7z"/></svg></a>
+                      <a href="#!" aria-label="Instagram" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                   </div>
+                 </div>
+               </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Navbar with Social Icons</h3>
+            <p class="component-description">Includes social media link icons, usually on the right.</p>
+             <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-split" aria-label="Split navigation">
+               <div class="navbar-container">
+                  <div class="navbar-segment segment-left">
+                     <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#!" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#!" class="nav-link">Services</a></li>
+                     </ul>
+                  </div>
+                  <a href="#!" class="navbar-brand centered">SplitBrand</a>
+                 <div class="navbar-segment segment-right">
+                    <ul class="navbar-nav">
+                       <li class="nav-item"><a href="#!" class="nav-link">Portfolio</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Contact</a></li>
+                    </ul>
+                 </div>
+                 <button class="navbar-toggler" type="button" aria-controls="navbarSplitMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                  <div class="navbar-collapse" id="navbarSplitMenu">
+                    <ul class="navbar-nav">
+                       <li class="nav-item"><a href="#!" class="nav-link">About</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Services</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Portfolio</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Contact</a></li>
+                    </ul>
+                 </div>
+               </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Split Links Navbar</h3>
+            <p class="component-description">Logo center, links split on either side.</p>
+             <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-minimal" aria-label="Minimal navigation">
+                <div class="navbar-container">
+                  <a href="#!" class="navbar-brand icon-brand" aria-label="Brand Home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                  </a>
+                  <button class="navbar-toggler ms-auto" type="button" aria-controls="navbarMinimalMenu" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                  </button>
+                  <div class="navbar-collapse" id="navbarMinimalMenu">
+                    <ul class="navbar-nav">
+                       <li class="nav-item"><a href="#!" class="nav-link">Menu Item 1</a></li>
+                       <li class="nav-item"><a href="#!" class="nav-link">Menu Item 2</a></li>
+                    </ul>
+                  </div>
+                </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Minimalist Icon Navbar</h3>
+            <p class="component-description">Uses an icon for the brand and focuses on simplicity.</p>
+             <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-dark" aria-label="Dark navigation">
+                <div class="navbar-container">
+                   <a href="#!" class="navbar-brand">DarkMode</a>
+                   <button class="navbar-toggler" type="button" aria-controls="navbarDarkMenu" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                   </button>
+                   <div class="navbar-collapse" id="navbarDarkMenu">
+                      <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#!" class="nav-link">Explore</a></li>
+                        <li class="nav-item"><a href="#!" class="nav-link">Create</a></li>
+                      </ul>
+                   </div>
+                </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Dark Background Navbar</h3>
+            <p class="component-description">Navbar with a distinct dark background and light text.</p>
+             <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+             <nav class="navbar navbar-brand-text-center" aria-label="Center brand text navigation">
+               <div class="navbar-container">
+                  <div class="navbar-segment segment-left">
+                      <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#!" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#!" class="nav-link">About</a></li>
+                     </ul>
+                  </div>
+                 <div class="navbar-brand centered-text">My Website Name</div>
+                  <div class="navbar-segment segment-right">
+                      <ul class="navbar-nav">
+                         <li class="nav-item"><a href="#!" class="nav-link">Services</a></li>
+                         <li class="nav-item"><a href="#!" class="nav-link">Contact</a></li>
+                     </ul>
+                  </div>
+                 <button class="navbar-toggler" type="button" aria-controls="navbarBrandTextMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
+                 </button>
+                  <div class="navbar-collapse" id="navbarBrandTextMenu">
+                     <ul class="navbar-nav">
+                         <li class="nav-item"><a href="#!" class="nav-link">Home</a></li>
+                         <li class="nav-item"><a href="#!" class="nav-link">About</a></li>
+                         <li class="nav-item"><a href="#!" class="nav-link">Services</a></li>
+                         <li class="nav-item"><a href="#!" class="nav-link">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+             </nav>
+          </div>
+           <div class="component-info">
+            <h3 class="component-title">Centered Brand Text Navbar</h3>
+            <p class="component-description">Similar to centered logo, using styled text for the brand.</p>
+             <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                 <div class="code-tabs-header"><button class="tab-btn active" data-tab="html">HTML</button><button class="tab-btn" data-tab="css">CSS</button><button class="tab-btn" data-tab="js">JS</button><button class="copy-btn" data-type="html"><svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="copy-text">Copy</span></button></div>
+                <div class="code-content active" data-content="html"> /* HTML as above */ </div>
+                <div class="code-content" data-content="css"> /* CSS in navbars.css */ </div>
+                <div class="code-content" data-content="js"> /* JS in script.js */ </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div> </section> </main>
+
+  <script src="js/script.js"></script>
+  <script src="js/navbars.js"></script>
+ </body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Component Gallery</title>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <link rel="stylesheet" href="css/newbuttons.css"> <link rel="stylesheet" href="css/main.css">       <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle theme">
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+    </button>
+  </div>
+
+  <header class="header">
+    <h1 class="title">UI Component Gallery</h1>
+    <p class="subtitle">A collection of beautiful, reusable UI components with code examples</p>
+  </header>
+
+  <main class="container">
+    <section class="component-section">
+      <h2 class="section-title">Buttons</h2>
+      <div class="component-grid">
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-glass">Glassy</button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Glass Button</h3>
+            <p class="component-description">A modern glassmorphism button with blur effect</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-glass"&gt;Glassy&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  backdrop-filter: blur(8px);
+}
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-gradient">Gradient</button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Gradient Button</h3>
+            <p class="component-description">A vibrant gradient button with scale animation</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-gradient"&gt;Gradient&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-gradient {
+  background: linear-gradient(135deg, #9c27b0, #673ab7);
+  color: white;
+  box-shadow: 0 4px 20px rgba(156, 39, 176, 0.4);
+}
+.btn-gradient:hover {
+  transform: scale(1.05);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-purple">Purple</button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Purple Button</h3>
+            <p class="component-description">A solid purple button with subtle hover effect</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-purple"&gt;Purple&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-purple {
+  background: var(--purple-color);
+  color: white;
+  border: none;
+}
+.btn-purple:hover {
+  background: var(--purple-dark);
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-outline">Outline</button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Outline Button</h3>
+            <p class="component-description">A clean outline button with fill effect on hover</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-outline {
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--purple-color);
+}
+.btn-outline:hover {
+  background: var(--purple-color);
+  color: white;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-bubble">Bubble</button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Bubble Button</h3>
+            <p class="component-description">A rounded bubble button with subtle shadow</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-bubble"&gt;Bubble&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-bubble {
+  background: white;
+  color: var(--dark-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.btn-bubble:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-icon">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download
+            </button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Icon Button</h3>
+            <p class="component-description">A button with icon and text</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-icon"&gt;
+  &lt;svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+    &lt;path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"&gt;&lt;/path&gt;
+    &lt;polyline points="7 10 12 15 17 10"&gt;&lt;/polyline&gt;
+    &lt;line x1="12" y1="15" x2="12" y2="3"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Download
+&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--purple-color);
+  color: white;
+}
+.btn-icon .icon {
+  margin-right: 8px;
+}
+.btn-icon:hover {
+  background: var(--purple-dark);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+         <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-neon">Neon Glow</button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Neon Glow Button</h3>
+            <p class="component-description">Button with a vibrant neon glow effect on hover</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-neon"&gt;Neon Glow&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-neon {
+  background-color: var(--purple-color);
+  color: white;
+  box-shadow: 0 0 5px var(--purple-color), 0 0 10px var(--purple-color);
+  transition: all 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+.btn-neon:hover {
+  box-shadow: 0 0 10px var(--purple-color), 0 0 25px var(--purple-color), 0 0 40px var(--purple-color);
+  background-color: var(--purple-dark);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-border-anim"><span>Animated Border</span></button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Animated Border Button</h3>
+            <p class="component-description">Border animates around the button on hover</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                      <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-border-anim"&gt;&lt;span&gt;Animated Border&lt;/span&gt;&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-border-anim {
+  background: none;
+  border: 2px solid transparent;
+  color: var(--purple-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-border-anim span {
+  position: relative;
+  z-index: 2;
+}
+.btn-border-anim::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 2px solid var(--purple-color);
+  border-radius: 9999px;
+  transform: scale(1.1);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: -1;
+}
+.btn-border-anim:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+.btn-border-anim:hover {
+  color: var(--purple-dark);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-3d">Push Me</button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">3D Push Button</h3>
+            <p class="component-description">Button with a pseudo-3D push effect on click</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                      <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-3d"&gt;Push Me&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-3d {
+  background-color: #5e35b1; /* Slightly darker purple base */
+  color: white;
+  border: none;
+  border-bottom: 4px solid #311b92; /* Darkest purple for shadow */
+  transition: all 0.1s ease-in-out;
+}
+.btn-3d:hover {
+  background-color: #673ab7; /* Lighter purple on hover */
+}
+.btn-3d:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+  box-shadow: 0 2px 0 #311b92;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-underline">Underline FX</button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Underline Hover Button</h3>
+            <p class="component-description">Text gets an animated underline on hover</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-underline"&gt;Underline FX&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-underline {
+  background: none;
+  border: none;
+  color: var(--purple-color);
+  padding-bottom: 12px; /* Ensure space for underline */
+  position: relative;
+  overflow: visible; /* Allow underline to show */
+}
+.btn-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 6px; /* Adjust position */
+  width: 0;
+  height: 2px;
+  background-color: var(--purple-color);
+  transition: all 0.3s ease-out;
+  transform: translateX(-50%);
+}
+.btn-underline:hover::after {
+  width: 70%; /* Or 100% if preferred */
+}
+.btn-underline:hover {
+  color: var(--purple-dark);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-skew"><span>Skewed</span></button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Skewed Button</h3>
+            <p class="component-description">Button with a dynamic skew effect</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-skew"&gt;&lt;span&gt;Skewed&lt;/span&gt;&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-skew {
+  background: linear-gradient(45deg, var(--purple-color), #673ab7);
+  color: white;
+  transform: skewX(-15deg);
+  border: none;
+}
+.btn-skew span {
+  display: inline-block; /* Needed for inner transform */
+  transform: skewX(15deg); /* Counter-skew the text */
+}
+.btn-skew:hover {
+  background: linear-gradient(45deg, var(--purple-dark), #5e35b1);
+  transform: skewX(-15deg) scale(1.05); /* Add scale on hover */
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="component-card">
+          <div class="component-preview">
+            <button class="btn btn-social">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <line x1="19" x2="19" y1="8" y2="14"></line>
+                <line x1="22" x2="16" y1="11" y2="11"></line>
+              </svg>
+              Follow
+            </button>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Social Icon Button</h3>
+            <p class="component-description">Simple button with icon, suitable for social actions</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                     <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;button class="btn btn-social"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"&gt;
+    &lt;path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"&gt;&lt;/path&gt;
+    &lt;circle cx="9" cy="7" r="4"&gt;&lt;/circle&gt;
+    &lt;line x1="19" x2="19" y1="8" y2="14"&gt;&lt;/line&gt;
+    &lt;line x1="22" x2="16" y1="11" y2="11"&gt;&lt;/line&gt;
+  &lt;/svg&gt;
+  Follow
+&lt;/button&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.btn-social {
+  background-color: #e9ecef; /* Light grey background */
+  color: var(--dark-color); /* Dark text */
+  border: none;
+  font-weight: 600;
+}
+.btn-social .icon {
+  margin-right: 8px;
+  stroke: var(--dark-color); /* Match text color */
+}
+.btn-social:hover {
+  background-color: #ced4da; /* Slightly darker grey */
+}
+/* Theme specific adjustments if needed */
+[data-theme="dark"] .btn-social {
+  background-color: #343a40; /* Darker grey for dark theme */
+  color: #f8f9fa; /* Light text */
+}
+[data-theme="dark"] .btn-social .icon {
+   stroke: #f8f9fa; /* Match text color */
+}
+[data-theme="dark"] .btn-social:hover {
+  background-color: #495057; /* Slightly lighter dark grey */
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        </div></section> </main>
+
+  <script src="js/script.js"></script> </body>
+</html>

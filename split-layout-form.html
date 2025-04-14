@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Your Account</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      min-height: calc(100vh - 4rem);
+    }
+
+    .left {
+      display: none;
+    }
+
+    .left-content {
+      padding: 3rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .features {
+      margin-top: 2rem;
+    }
+
+    .feature {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .icon {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 0.5rem;
+      border-radius: 9999px;
+      height: 2rem;
+      width: 2rem;
+    }
+
+    .right {
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-wrapper {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .form-wrapper h2 {
+      text-align: center;
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-wrapper p {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .submit-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .footer-link {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #666;
+      margin-top: 1rem;
+    }
+
+    .footer-link a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .left {
+        display: flex;
+        width: 50%;
+        background: linear-gradient(to bottom right, #7c3aed, #4f46e5);
+      }
+      .right {
+        width: 50%;
+        padding: 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Panel -->
+    <div class="left">
+      <div class="left-content">
+        <div>
+          <h1>Welcome to our platform</h1>
+          <p style="opacity: 0.9;">Join thousands of users and teams who use our platform to build amazing products.</p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="icon">✔</div>
+            <div>
+              <h3>Easy to use</h3>
+              <p style="opacity: 0.8;">Our intuitive interface makes it simple to get started</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon">✔</div>
+            <div>
+              <h3>Powerful features</h3>
+              <p style="opacity: 0.8;">Advanced tools to help you grow and succeed</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon">✔</div>
+            <div>
+              <h3>24/7 Support</h3>
+              <p style="opacity: 0.8;">Our team is always here to help when you need it</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right">
+      <div class="form-wrapper">
+        <h2>Create your account</h2>
+        <p>Fill in the form below to get started</p>
+        <form>
+          <div class="form-grid">
+            <div>
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" placeholder="John" />
+            </div>
+            <div>
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" placeholder="Doe" />
+            </div>
+          </div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="john@example.com" />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" />
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" />
+            <label for="terms">
+              I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">Create Account</button>
+
+          <div class="footer-link">
+            Already have an account? <a href="#">Sign in</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

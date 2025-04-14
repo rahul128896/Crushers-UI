@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <title>Illustrated Register</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fce7f3, #ede9fe);
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .illustration {
+      flex: 1;
+      display: none;
+      background-color: transparent;
+      padding: 3rem;
+    }
+
+    .illustration-content {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .form-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .form-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      background-color: #f4f4f4;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    .small-text {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .terms {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .terms a {
+      color: #6b21a8;
+      text-decoration: none;
+      margin: 0 0.25rem;
+    }
+
+    .terms a:hover {
+      text-decoration: underline;
+    }
+
+    .signup-btn {
+      background-color: #7c3aed;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .signup-btn:hover {
+      background-color: #6d28d9;
+    }
+
+    .signin-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .signin-link a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .signin-link a:hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 1024px) {
+      .illustration {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Illustration Section -->
+    <div class="illustration">
+      <div class="illustration-content">
+        <h1>Start your creative journey</h1>
+        <p class="description">Join our platform and connect with creative minds from around the world.</p>
+        <div>
+          <!-- You can replace the SVG below with your own -->
+          <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M218.452 40.1386C283.762 -0.0530224 371.746 -12.1459 443.233 22.5105C514.72 57.1669 569.712 138.426 582.638 226.502C595.563 314.578 566.422 409.47 505.709 463.214C444.996 516.958 352.71 529.553 271.503 501.053C190.296 472.553 120.168 402.958 83.3419 320.502C46.5154 238.046 43.0008 142.729 83.3419 74.7949C123.683 6.86083 153.142 80.3303 218.452 40.1386Z" fill="#6366F1" fill-opacity="0.2"/>
+            <circle cx="346" cy="232" r="112" fill="#6366F1" fill-opacity="0.4"/>
+            <circle cx="261" cy="286" r="60" fill="#6366F1" fill-opacity="0.3"/>
+            <circle cx="110" cy="199" r="40" fill="#6366F1" fill-opacity="0.2"/>
+            <circle cx="65" cy="120" r="20" fill="#6366F1" fill-opacity="0.3"/>
+            <circle cx="175" cy="120" r="40" fill="#6366F1" fill-opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <div class="form-box">
+        <h2>Create your account</h2>
+        <p class="description">Enter your information to get started</p>
+
+        <form>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="John Doe" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="john@example.com" />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter a strong password" />
+          <p class="small-text">Password must be at least 8 characters long</p>
+
+          <div class="terms">
+            <input type="checkbox" id="terms" />
+            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+          </div>
+
+          <button class="signup-btn" type="submit">Sign Up</button>
+        </form>
+
+        <div class="signin-link">
+          Already have an account? <a href="#">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

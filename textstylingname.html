@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Style Showcase</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@100&family=Noto+Sans+KR:wght@300&family=Noto+Sans+SC:wght@700&family=Noto+Sans+TC:wght@700&family=Noto+Sans+Thai&family=Noto+Serif+GR&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle theme">
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+    </button>
+  </div>
+
+  <header class="header">
+    <h1 class="title">Text Style Showcase</h1>
+    <p class="subtitle">A collection of beautiful, reusable text styles with code examples</p>
+  </header>
+
+  <main class="container">
+    <section class="component-section">
+      <h2 class="section-title">Text Styles</h2>
+      <div class="component-grid">
+        <!-- Arabic Italic -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="arabic-italic">Arabic Italic</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Arabic Italic</h3>
+            <p class="component-description">Traditional Arabic with italic style</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="arabic-italic"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.arabic-italic {
+  font-family: 'Traditional Arabic', Arial, sans-serif;
+  font-style: italic;
+  direction: rtl;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Persian Bold -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="persian-bold">Persian Bold</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Persian Bold</h3>
+            <p class="component-description">Bold Persian text with right-to-left direction</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="persian-bold"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.persian-bold {
+  font-family: 'Iranian Sans', Tahoma, sans-serif;
+  font-weight: bold;
+  direction: rtl;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Roman Script -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="roman-script">Roman Script</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Roman Script</h3>
+            <p class="component-description">Classic Times New Roman with letter spacing</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="roman-script"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.roman-script {
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 1px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Greek Serif -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="greek-serif">Greek Serif</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Greek Serif</h3>
+            <p class="component-description">Traditional Greek serif font</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="greek-serif"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.greek-serif {
+  font-family: 'Noto Serif GR', serif;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Japanese Thin -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="japanese-thin">Japanese Thin</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Japanese Thin</h3>
+            <p class="component-description">Lightweight Japanese font style</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="japanese-thin"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.japanese-thin {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Chinese Bold -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="chinese-bold">Chinese Bold</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Chinese Bold</h3>
+            <p class="component-description">Strong Simplified Chinese font</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="chinese-bold"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.chinese-bold {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 700;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Korean Light -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="korean-light">Korean Light</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Korean Light</h3>
+            <p class="component-description">Lightweight Korean font style</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="korean-light"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.korean-light {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Thai Cursive -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="thai-cursive">Thai Cursive</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Thai Cursive</h3>
+            <p class="component-description">Thai script with cursive style</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="thai-cursive"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.thai-cursive {
+  font-family: 'Noto Sans Thai', cursive;
+  font-style: italic;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Indian Calligraphy -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="indian-calligraphy">Indian Calligraphy</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Indian Calligraphy</h3>
+            <p class="component-description">Traditional Indian script style</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="indian-calligraphy"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.indian-calligraphy {
+  font-family: 'Mangal', 'Sanskrit Text', serif;
+  text-decoration: underline;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Latin Italic -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="latin-italic">Latin Italic</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Latin Italic</h3>
+            <p class="component-description">Classic italic Latin script</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="latin-italic"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.latin-italic {
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Vintage Bold -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="vintage-bold">Vintage Bold</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Vintage Bold</h3>
+            <p class="component-description">Bold vintage typography style</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="vintage-bold"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.vintage-bold {
+  font-family: 'Old Standard TT', serif;
+  font-weight: bold;
+  color: #5c4d3c;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Modern Sans -->
+        <div class="component-card">
+          <div class="component-preview">
+            <h2 class="modern-sans">Modern Sans</h2>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Modern Sans</h3>
+            <p class="component-description">Clean modern sans-serif font</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;h2 class="modern-sans"&gt;Your Text Here&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.modern-sans {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        
+        
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script src="js/textstyles.js"></script>
+</body>
+</html>

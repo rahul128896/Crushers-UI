@@ -1,0 +1,231 @@
+/* International Text Styles */
+.arabic-italic {
+    font-family: 'Traditional Arabic', Arial, sans-serif;
+    font-style: italic;
+    direction: rtl;
+  }
+  
+  .persian-bold {
+    font-family: 'Iranian Sans', Tahoma, sans-serif;
+    font-weight: bold;
+    direction: rtl;
+  }
+  
+  .roman-script {
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 1px;
+  }
+  
+  .greek-serif {
+    font-family: 'Noto Serif GR', serif;
+  }
+  
+  .japanese-thin {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 100;
+  }
+  
+  .chinese-bold {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+  }
+  
+  .korean-light {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+  }
+  
+  .thai-cursive {
+    font-family: 'Noto Sans Thai', cursive;
+    font-style: italic;
+  }
+  
+  .indian-calligraphy {
+    font-family: 'Mangal', 'Sanskrit Text', serif;
+    text-decoration: underline;
+  }
+  
+  .latin-italic {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+  }
+  
+  /* Decorative Text Styles */
+  .vintage-bold {
+    font-family: 'Old Standard TT', serif;
+    font-weight: bold;
+    color: #5c4d3c;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+  
+  .modern-sans {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+  }
+  
+  .retro-script {
+    font-family: 'Brush Script MT', cursive;
+    color: #ff6b6b;
+  }
+  
+  .neon-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    font-weight: bold;
+  }
+  
+  .cyber-glow {
+    color: #0ff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ff, 0 0 20px #0ff;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .classic-regular {
+    font-family: 'Garamond', serif;
+    font-weight: normal;
+  }
+  
+  .futuristic-thin {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
+  
+  .victorian-serif {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: #3a2c1e;
+  }
+  
+  .egyptian-slab {
+    font-family: 'Rockwell', serif;
+    font-weight: bold;
+  }
+  
+  .pixel-block {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #00ff00;
+  }
+  
+  .handwritten-italic {
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+  }
+  
+  .gothic-bold {
+    font-family: 'Blackletter', 'Old English Text MT', serif;
+    font-weight: bold;
+  }
+  
+  .minimal-light {
+    font-family: 'Arial Narrow', sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+  
+  .rustic-regular {
+    font-family: 'IM Fell English', serif;
+    color: #5c4d3c;
+  }
+  
+  .floral-cursive {
+    font-family: 'Zeyada', cursive;
+    color: #d35d6e;
+  }
+  
+  .ink-brush {
+    font-family: 'Liu Jian Mao Cao', cursive;
+    color: #000;
+    font-size: 1.5em;
+  }
+  
+  .metallic-bold {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #d4af37;
+    text-shadow: 1px 1px 1px #333;
+  }
+  
+  .graffiti-script {
+    font-family: 'Graffiti', 'Urban Jungle', sans-serif;
+    color: #ff3366;
+    text-shadow: 2px 2px 0px #000;
+  }
+  
+  .bubble-thin {
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: 100;
+    color: pink;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+  }
+  
+  .stitched-italic {
+    font-family: 'Courier New', monospace;
+    font-style: italic;
+    color: #333;
+    text-shadow: 1px 1px 0px #fff, 2px 2px 0px #999;
+  }
+  
+  .outline-bold {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    font-weight: bold;
+  }
+  
+  .shadow-regular {
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .embossed-serif {
+    font-family: 'Times New Roman', serif;
+    color: #ccc;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #fff;
+  }
+  
+  .gradient-italic {
+    font-style: italic;
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .calligraphy-light {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 100;
+    color: #333;
+  }
+  
+  .ethereal-glow {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073;
+  }
+  
+  .flame-italic {
+    font-style: italic;
+    color: #ff4500;
+    text-shadow: 0 0 5px #ff8c00;
+  }
+  
+  .stone-bold {
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
+    color: #5a4a3f;
+  }
+  
+  .crystal-light {
+    font-weight: 100;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+  }
+  
+  .chalkboard-script {
+    font-family: 'Chalkboard SE', 'Comic Sans MS', cursive;
+    color: #fff;
+    text-shadow: 1px 1px 0px #999;
+    background-color: #2a3542;
+    padding: 5px;
+  }

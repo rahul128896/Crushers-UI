@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <title>Tabs Component Gallery</title>
+  <link rel="stylesheet" href="css/tabs.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle theme">
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+    </button>
+  </div>
+
+  <header class="header">
+    <h1 class="title">Tabs Component Gallery</h1>
+    <p class="subtitle">A collection of beautiful, reusable tab components with code examples</p>
+  </header>
+
+  <main class="container">
+    <section class="component-section">
+      <h2 class="section-title">Tabs</h2>
+      <div class="component-grid">
+        <!-- Basic Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-basic">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Basic Tabs</h3>
+            <p class="component-description">Simple tabs with default styling</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-basic"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-basic .tabs-header {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs-basic .tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+}
+
+.tabs-basic .tab-btn.active {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.tabs-basic .tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--purple-color);
+}
+
+.tabs-basic .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Pills Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-pills">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Pills Tabs</h3>
+            <p class="component-description">Tabs styled as pills with rounded corners</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-pills"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-pills .tabs-header {
+  display: flex;
+  gap: 8px;
+}
+
+.tabs-pills .tab-btn {
+  padding: 8px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.tabs-pills .tab-btn.active {
+  background: var(--purple-color);
+  color: white;
+  border-color: var(--purple-color);
+}
+
+.tabs-pills .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Underline Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-underline">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Underline Tabs</h3>
+            <p class="component-description">Tabs with subtle underline indicator</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-underline"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-underline .tabs-header {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs-underline .tab-btn {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+}
+
+.tabs-underline .tab-btn.active {
+  color: var(--text-color);
+}
+
+.tabs-underline .tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: var(--purple-color);
+  border-radius: 2px;
+}
+
+.tabs-underline .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Vertical Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-vertical">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Vertical Tabs</h3>
+            <p class="component-description">Tabs displayed vertically on the left</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-vertical"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-vertical {
+  display: flex;
+}
+
+.tabs-vertical .tabs-header {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  min-width: 120px;
+}
+
+.tabs-vertical .tab-btn {
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: left;
+  border-left: 3px solid transparent;
+}
+
+.tabs-vertical .tab-btn.active {
+  color: var(--text-color);
+  border-left: 3px solid var(--purple-color);
+  background: rgba(156, 39, 176, 0.1);
+}
+
+.tabs-vertical .tabs-content {
+  padding: 0 16px;
+  flex-grow: 1;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Icon Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-icon">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  <span>Home</span>
+                </button>
+                <button class="tab-btn" data-tab="tab2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Profile</span>
+                </button>
+                <button class="tab-btn" data-tab="tab3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                  <span>Settings</span>
+                </button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Home content</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Profile content</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Settings content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Icon Tabs</h3>
+            <p class="component-description">Tabs with icons alongside text</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-icon"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;
+      &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"&gt;&lt;/path&gt;
+        &lt;polyline points="9 22 9 12 15 12 15 22"&gt;&lt;/polyline&gt;
+      &lt;/svg&gt;
+      &lt;span&gt;Home&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;
+      &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"&gt;&lt;/path&gt;
+        &lt;circle cx="12" cy="7" r="4"&gt;&lt;/circle&gt;
+      &lt;/svg&gt;
+      &lt;span&gt;Profile&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;
+      &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;
+        &lt;circle cx="12" cy="12" r="3"&gt;&lt;/circle&gt;
+        &lt;path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+      &lt;span&gt;Settings&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Home content&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Profile content&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Settings content&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-icon .tabs-header {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs-icon .tab-btn {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tabs-icon .tab-btn.active {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.tabs-icon .tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--purple-color);
+}
+
+.tabs-icon .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Segmented Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-segmented">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Segmented Tabs</h3>
+            <p class="component-description">Tabs styled as segmented controls</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-segmented"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-segmented .tabs-header {
+  display: inline-flex;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.tabs-segmented .tab-btn {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.tabs-segmented .tab-btn.active {
+  background: var(--purple-color);
+  color: white;
+}
+
+.tabs-segmented .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Gradient Background Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-gradient">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Gradient Tabs</h3>
+            <p class="component-description">Tabs with gradient background</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-gradient"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-gradient .tabs-header {
+  display: flex;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tabs-gradient .tab-btn {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  border-radius: 6px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tabs-gradient .tab-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 500;
+}
+
+.tabs-gradient .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Glass Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-glass">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Glass Tabs</h3>
+            <p class="component-description">Tabs with glassmorphism effect</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-glass"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-glass .tabs-header {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tabs-glass .tab-btn {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 6px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tabs-glass .tab-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.tabs-glass .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Animated Line Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-animated-line">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                <div class="tab-indicator"></div>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Animated Line Tabs</h3>
+            <p class="component-description">Tabs with animated underline indicator</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-animated-line"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+    &lt;div class="tab-indicator"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-animated-line .tabs-header {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs-animated-line .tab-btn {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+}
+
+.tabs-animated-line .tab-btn.active {
+  color: var(--text-color);
+}
+
+.tabs-animated-line .tab-indicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--purple-color);
+  transition: all 0.3s ease;
+}
+
+.tabs-animated-line .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Rounded Corner Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-rounded">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Rounded Corner Tabs</h3>
+            <p class="component-description">Tabs with rounded corners and subtle styling</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-rounded"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-rounded .tabs-header {
+  display: flex;
+  gap: 8px;
+}
+
+.tabs-rounded .tab-btn {
+  padding: 8px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.tabs-rounded .tab-btn.active {
+  background: var(--purple-color);
+  color: white;
+  border-color: var(--purple-color);
+}
+
+.tabs-rounded .tabs-content {
+  padding: 16px 0;
+  border-radius: 0 0 8px 8px;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Floating Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-floating">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Floating Tabs</h3>
+            <p class="component-description">Tabs with floating effect and shadow</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-floating"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-floating .tabs-header {
+  display: flex;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.tabs-floating .tab-btn {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 6px;
+  flex-grow: 1;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.tabs-floating .tab-btn.active {
+  background: var(--purple-color);
+  color: white;
+  box-shadow: 0 2px 8px rgba(156, 39, 176, 0.3);
+}
+
+.tabs-floating .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Full Width Tabs -->
+        <div class="component-card">
+          <div class="component-preview">
+            <div class="tabs tabs-full-width">
+              <div class="tabs-header">
+                <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                <button class="tab-btn" data-tab="tab3">Tab 3</button>
+              </div>
+              <div class="tabs-content">
+                <div class="tab-pane active" id="tab1">
+                  <p>Content for Tab 1</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Content for Tab 2</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>Content for Tab 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="component-info">
+            <h3 class="component-title">Full Width Tabs</h3>
+            <p class="component-description">Tabs that span the full width of their container</p>
+            <details class="code-details">
+              <summary class="code-summary">View Code</summary>
+              <div class="code-tabs">
+                <div class="code-tabs-header">
+                  <button class="tab-btn active" data-tab="html">HTML</button>
+                  <button class="tab-btn" data-tab="css">CSS</button>
+                  <button class="copy-btn" data-type="html">
+                    <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                    </svg>
+                    <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span class="copy-text">Copy</span>
+                  </button>
+                </div>
+                <div class="code-content active" data-content="html">
+                  <pre><code>&lt;div class="tabs tabs-full-width"&gt;
+  &lt;div class="tabs-header"&gt;
+    &lt;button class="tab-btn active" data-tab="tab1"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab2"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-btn" data-tab="tab3"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;Content for Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Content for Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab3"&gt;
+      &lt;p&gt;Content for Tab 3&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-content" data-content="css">
+                  <pre><code>.tabs-full-width .tabs-header {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs-full-width .tab-btn {
+  padding: 12px 0;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tabs-full-width .tab-btn.active {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.tabs-full-width .tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--purple-color);
+}
+
+.tabs-full-width .tabs-content {
+  padding: 16px 0;
+}</code></pre>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script src="js/tabs.js"></script>
+</body>
+</html>

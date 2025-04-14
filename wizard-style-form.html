@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-04-14 at 8.38.12 PM.jpeg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wizard Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #84fab0, #8fd3f4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .step {
+      display: none;
+    }
+    .step.active {
+      display: block;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #4fd1c5;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #38b2ac;
+    }
+    .checkbox {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    .checkbox input {
+      margin-right: 10px;
+    }
+    .checkbox label a {
+      color: #3182ce;
+      text-decoration: none;
+    }
+    .social {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+    }
+    .social a {
+      flex: 1;
+      margin: 0 5px;
+      padding: 10px;
+      background: #edf2f7;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .extra {
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register (Step <span id="stepNum">1</span> of 2)</h2>
+
+    <div class="step active" id="step1">
+      <input type="text" placeholder="Full Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+    </div>
+
+    <div class="step" id="step2">
+        <div class="checkbox">
+            <label for="terms">
+              <input type="checkbox" id="terms" />
+              I agree to the <a href="#">Terms & Conditions</a>
+            </label>
+          </div>
+          
+
+      <div class="social">
+        <a href="#">Google</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="prevBtn" onclick="prevStep()" style="display:none;">Previous</button>
+      <button id="nextBtn" onclick="nextStep()">Next</button>
+    </div>
+
+    <div class="extra">
+      Already have an account? <a href="#">Log in</a>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 1;
+
+    function showStep(step) {
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.getElementById('step' + step).classList.add('active');
+      document.getElementById('stepNum').innerText = step;
+
+      document.getElementById('prevBtn').style.display = step === 1 ? 'none' : 'inline-block';
+      document.getElementById('nextBtn').innerText = step === 2 ? 'Register' : 'Next';
+    }
+
+    function nextStep() {
+      if (currentStep === 1) {
+        currentStep++;
+        showStep(currentStep);
+      } else {
+        alert("Account Registered!");
+        // You can add form submission here
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+  </script>
+</body>
+</html>
