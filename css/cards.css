@@ -81,17 +81,17 @@
   }
   .card-avatar {
     width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    height: 80px;
+    border-radius: 80%;
     border: 4px solid var(--card-bg); /* Use card background color */
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    margin-top: -50px; /* Overlap header */
+    margin-top: -20px; /* Overlap header */
     position: relative; /* Needed if using z-index */
     z-index: 1; /* Make sure avatar is above potential background elements */
     background-color: var(--card-bg); /* Ensure avatar bg matches card */
   }
   .card-avatar.small { /* For testimonial */
-    width: 50px; height: 50px;
+    width: 50px; height: 70px;
     border-width: 2px;
   }
   .card-profile .card-body {
